@@ -24,6 +24,9 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "pytest>=7.0",
+    # Required by the EPUB tests and collapsed-catalog benchmark fixtures.
+    "EbookLib>=0.18",
+    "quickjs>=1.19",
 ]
 dev = [
     "pytest>=7.0",
