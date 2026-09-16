@@ -1,0 +1,47 @@
+{
+  "start": "catalog.html",
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 断浪1",
+      "第2章 断浪2",
+      "第3章 断浪3",
+      "第4章 断浪4",
+      "第5章 断浪5",
+      "第6章 断浪6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 断浪1",
+    "第2章 断浪2",
+    "第3章 断浪3",
+    "第4章 断浪4",
+    "第5章 断浪5",
+    "第6章 断浪6"
+  ],
+  "content_pagination": {
+    "第1章 断浪1": 2
+  },
+  "content_must_contain": {
+    "第1章 断浪1": [
+      "上半",
+      "下半"
+    ]
+  },
+  "content_must_not_contain": {
+    "第1章 断浪1": [
+      "保存书签",
+      "阅读记录",
+      "热门小说推荐"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+
+# These fixtures intentionally contain GBK-encoded bytes.
+benchmarks/sites/site003_gbk/*.html -text

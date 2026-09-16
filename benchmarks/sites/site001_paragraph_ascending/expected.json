@@ -1,0 +1,63 @@
+{
+  "start": "catalog.html",
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "metadata": {
+    "book_title": "落霞孤鹜",
+    "author": " benchmark 作者"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 落霞1",
+      "第2章 落霞2",
+      "第3章 落霞3",
+      "第4章 落霞4",
+      "第5章 落霞5",
+      "第6章 落霞6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 落霞1",
+    "第2章 落霞2",
+    "第3章 落霞3",
+    "第4章 落霞4",
+    "第5章 落霞5",
+    "第6章 落霞6"
+  ],
+  "content_must_contain": {
+    "第1章 落霞1": [
+      "钟声从谷底传来"
+    ],
+    "第2章 落霞2": [
+      "钟声从谷底传来"
+    ],
+    "第3章 落霞3": [
+      "钟声从谷底传来"
+    ],
+    "第4章 落霞4": [
+      "钟声从谷底传来"
+    ],
+    "第5章 落霞5": [
+      "钟声从谷底传来"
+    ],
+    "第6章 落霞6": [
+      "钟声从谷底传来"
+    ]
+  },
+  "content_statuses": {
+    "第1章 落霞1": "CONTENT_OK",
+    "第2章 落霞2": "CONTENT_OK",
+    "第3章 落霞3": "CONTENT_OK",
+    "第4章 落霞4": "CONTENT_OK",
+    "第5章 落霞5": "CONTENT_OK",
+    "第6章 落霞6": "CONTENT_OK"
+  }
+}

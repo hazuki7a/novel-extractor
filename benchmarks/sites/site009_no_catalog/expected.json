@@ -1,0 +1,28 @@
+{
+  "start": "2.html",
+  "pages": {
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE"
+  },
+  "catalog": null,
+  "navigation": {
+    "2.html": {
+      "previous": "1.html",
+      "next": "3.html",
+      "catalog": null
+    },
+    "3.html": {
+      "previous": "2.html",
+      "next": "4.html",
+      "catalog": null
+    }
+  },
+  "chapter_order": [
+    "第1章 逐流1",
+    "第2章 逐流2",
+    "第3章 逐流3",
+    "第4章 逐流4"
+  ]
+}

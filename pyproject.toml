@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novel-extractor"
+version = "0.1.0"
+description = "Ruleless Novel Structure Inference Engine - no source rules, no API keys, no cloud AI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.24",
+    "lxml>=4.9",
+    "beautifulsoup4>=4.12",
+    "trafilatura>=1.8",
+    "charset-normalizer>=3.1",
+    # TLS verification against the OS trust store: many small novel hosts
+    # serve incomplete certificate chains that the static certifi bundle
+    # cannot complete (Windows/macOS system APIs can).
+    "truststore>=0.9",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+dev = [
+    "pytest>=7.0",
+    # EPUB export (task 28); falls back to TXT-only when absent.
+    "EbookLib>=0.18",
+    # JS-rendered page support (task 26). Browser binaries additionally
+    # require: playwright install chromium
+    "playwright>=1.40",
+    # Local JS sandbox used to expand collapsed catalogs (展开完整列表
+    # style JSONP loaders). Optional: without it those sites fall back to
+    # a gap warning instead of full recovery.
+    "quickjs>=1.19",
+]
+
+[project.scripts]
+novel-extractor = "novel_extractor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

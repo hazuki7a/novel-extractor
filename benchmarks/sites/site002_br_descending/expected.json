@@ -1,0 +1,31 @@
+{
+  "start": "catalog.html",
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 听雪1",
+      "第2章 听雪2",
+      "第3章 听雪3",
+      "第4章 听雪4",
+      "第5章 听雪5",
+      "第6章 听雪6"
+    ],
+    "direction": "DESCENDING"
+  },
+  "chapter_order": [
+    "第1章 听雪1",
+    "第2章 听雪2",
+    "第3章 听雪3",
+    "第4章 听雪4",
+    "第5章 听雪5",
+    "第6章 听雪6"
+  ]
+}

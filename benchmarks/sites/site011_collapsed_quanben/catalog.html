@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta property="og:novel:book_name" content="折叠目录书">
+<meta property="og:novel:author" content="折叠 作者">
+<title>折叠目录书最新章节列表</title>
+<script>
+function scramble(s){return 'P' + s.length + 'X';}
+var callback='6ebc42';
+function load_more(book){
+  document.getElementById('detail').innerHTML='<div>[ loading... ]</div>';
+  var head=document.getElementsByTagName('head').item(0);
+  var el=document.createElement('script');
+  el.src='/index.php?c=book&a=list.jsonp&callback='+callback+'&book_id='+book+'&b='+scramble(callback);
+  head.appendChild(el);
+}
+</script>
+</head><body>
+<h1>折叠目录书</h1>
+<ul class="list3"><li><a href="1.html">第1章 1</a></li><li><a href="2.html">第1章 2</a></li><li><a href="3.html">第2章 1</a></li><li><a href="4.html">第2章 2</a></li><li><a href="5.html">第2章 3</a></li><li><a href="6.html">第3章 1</a></li><li><a href="7.html">第3章 2</a></li><li><a href="8.html">第3章 3</a></li><li><a href="9.html">第4章 1</a></li><li><a href="10.html">第4章 2</a></li><li><a href="11.html">第5章 1</a></li><li><a href="12.html">第5章 2</a></li></ul>
+<div class="content_more" id="detail"><div class="more">...
+<a href="javascript:void(0)" onclick="load_more('42')">[展开完整列表]</a> ...</div></div>
+<ul class="list3"><li><a href="39.html">第19章 1</a></li><li><a href="40.html">第19章 2</a></li><li><a href="41.html">第20章 1</a></li><li><a href="42.html">第20章 2</a></li><li><a href="43.html">第21章 1</a></li><li><a href="44.html">第21章 2</a></li></ul>
+</body></html>

@@ -1,0 +1,35 @@
+{
+  "start": "catalog.html",
+  "encodings": {
+    "catalog.html": "gb18030",
+    "1.html": "gb18030"
+  },
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 归尘1",
+      "第2章 归尘2",
+      "第3章 归尘3",
+      "第4章 归尘4",
+      "第5章 归尘5",
+      "第6章 归尘6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 归尘1",
+    "第2章 归尘2",
+    "第3章 归尘3",
+    "第4章 归尘4",
+    "第5章 归尘5",
+    "第6章 归尘6"
+  ]
+}

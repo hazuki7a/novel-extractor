@@ -1,0 +1,39 @@
+{
+  "start": "catalog.html",
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 空山1",
+      "第2章 空山2",
+      "第3章 空山3",
+      "第4章 空山4",
+      "第5章 空山5",
+      "第6章 空山6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 空山1",
+    "第2章 空山2",
+    "第3章 空山3",
+    "第4章 空山4",
+    "第5章 空山5",
+    "第6章 空山6"
+  ],
+  "content_statuses": {
+    "第1章 空山1": "CONTENT_OK",
+    "第2章 空山2": "PAYWALL",
+    "第3章 空山3": "LOGIN_REQUIRED",
+    "第4章 空山4": "EMPTY_CONTENT",
+    "第5章 空山5": "CONTENT_OK",
+    "第6章 空山6": "CONTENT_OK"
+  }
+}

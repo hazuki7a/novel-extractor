@@ -1,0 +1,55 @@
+{
+  "start": "index.html",
+  "pages": {
+    "index.html": "BOOK_PAGE",
+    "catalog.html": "CATALOG_PAGE",
+    "1.html": "CHAPTER_PAGE",
+    "2.html": "CHAPTER_PAGE",
+    "3.html": "CHAPTER_PAGE",
+    "4.html": "CHAPTER_PAGE",
+    "5.html": "CHAPTER_PAGE",
+    "6.html": "CHAPTER_PAGE"
+  },
+  "metadata": {
+    "book_title": "望岳台"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 望岳1",
+      "第2章 望岳2",
+      "第3章 望岳3",
+      "第4章 望岳4",
+      "第5章 望岳5",
+      "第6章 望岳6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 望岳1",
+    "第2章 望岳2",
+    "第3章 望岳3",
+    "第4章 望岳4",
+    "第5章 望岳5",
+    "第6章 望岳6"
+  ],
+  "content_must_contain": {
+    "第1章 望岳1": [
+      "山道在雾里"
+    ],
+    "第2章 望岳2": [
+      "山道在雾里"
+    ],
+    "第3章 望岳3": [
+      "山道在雾里"
+    ],
+    "第4章 望岳4": [
+      "山道在雾里"
+    ],
+    "第5章 望岳5": [
+      "山道在雾里"
+    ],
+    "第6章 望岳6": [
+      "山道在雾里"
+    ]
+  }
+}

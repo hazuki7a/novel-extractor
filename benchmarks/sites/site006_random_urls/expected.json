@@ -1,0 +1,31 @@
+{
+  "start": "catalog.html",
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "ch_9f3a.html": "CHAPTER_PAGE",
+    "ch_ab77.html": "CHAPTER_PAGE",
+    "ch_k201.html": "CHAPTER_PAGE",
+    "ch_xd04.html": "CHAPTER_PAGE",
+    "ch_m8qz.html": "CHAPTER_PAGE",
+    "ch_e55t.html": "CHAPTER_PAGE"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 折戟1",
+      "第2章 折戟2",
+      "第3章 折戟3",
+      "第4章 折戟4",
+      "第5章 折戟5",
+      "第6章 折戟6"
+    ],
+    "direction": "ASCENDING"
+  },
+  "chapter_order": [
+    "第1章 折戟1",
+    "第2章 折戟2",
+    "第3章 折戟3",
+    "第4章 折戟4",
+    "第5章 折戟5",
+    "第6章 折戟6"
+  ]
+}

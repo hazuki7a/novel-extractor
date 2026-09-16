@@ -1,0 +1,51 @@
+{
+  "start": "catalog.html",
+  "requires_quickjs": true,
+  "pages": {
+    "catalog.html": "CATALOG_PAGE",
+    "100.html": "CHAPTER_PAGE",
+    "200.html": "CHAPTER_PAGE",
+    "300.html": "CHAPTER_PAGE",
+    "400.html": "CHAPTER_PAGE",
+    "500.html": "CHAPTER_PAGE",
+    "600.html": "CHAPTER_PAGE",
+    "700.html": "CHAPTER_PAGE",
+    "800.html": "CHAPTER_PAGE"
+  },
+  "metadata": {
+    "book_title": "灵东传",
+    "author": "灵东 作者"
+  },
+  "catalog": {
+    "titles": [
+      "第1章 灵东1",
+      "第2章 灵东2",
+      "第3章 灵东3",
+      "第4章 灵东4",
+      "第5章 灵东5",
+      "第6章 灵东6",
+      "第7章 灵东7",
+      "第8章 灵东8"
+    ],
+    "direction": "ASCENDING"
+  },
+  "catalog_total_entries": 8,
+  "chapter_order": [
+    "第1章 灵东1",
+    "第2章 灵东2",
+    "第3章 灵东3",
+    "第4章 灵东4",
+    "第5章 灵东5",
+    "第6章 灵东6",
+    "第7章 灵东7",
+    "第8章 灵东8"
+  ],
+  "content_must_contain": {
+    "第1章 灵东1": [
+      "p1"
+    ],
+    "第8章 灵东8": [
+      "p8"
+    ]
+  }
+}
