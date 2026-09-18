@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_text_structures",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "p_chapter",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第一章 松港",
+      "content_reference_path": "../../fixtures/synthetic/syn_text_structures/reference/p_chapter.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "br_chapter",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第二章 雾桥",
+      "content_reference_path": "../../fixtures/synthetic/syn_text_structures/reference/br_chapter.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "comments_chapter",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第三章 灯塔",
+      "content_reference_path": "../../fixtures/synthetic/syn_text_structures/reference/comments_chapter.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [
+        "读者评论请勿进入正文"
+      ],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "short_prologue",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "序章 灯亮",
+      "content_reference_path": "../../fixtures/synthetic/syn_text_structures/reference/short_prologue.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": [
+        "Short but intentionally complete prose."
+      ]
+    }
+  ],
+  "logical_chapters": [],
+  "expected_reading_order": [],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

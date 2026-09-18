@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_case",
+  "annotation_status": "READY",
+  "case_id": "syn_content_pagination",
+  "site_id": "synthetic",
+  "suite": "SYNTHETIC_REGRESSION",
+  "scenario_tags": [
+    "content_pagination",
+    "mislabelled_next_chapter"
+  ],
+  "dataset_split": "development",
+  "template_family": "synthetic:syn_content_pagination",
+  "capture_scope": "sampled_subgraph",
+  "source_type": "synthetic",
+  "created_at": "2026-09-17T00:00:00+08:00",
+  "reviewed_at": "2026-09-17T00:00:00+08:00",
+  "input_root": "../../fixtures/synthetic/syn_content_pagination",
+  "entry_page_id": "chapter_1_page_1",
+  "pages": [
+    {
+      "page_id": "chapter_1_page_1",
+      "requested_url": "https://synthetic.invalid/pagination/ch1-1",
+      "final_url": "https://synthetic.invalid/pagination/ch1-1",
+      "captured_at": "2026-09-17T00:00:00+08:00",
+      "input_kind": "SYNTHETIC_HTML",
+      "input_path": "chapter_1_page_1.html",
+      "input_sha256": "8432838b48caa2b73434b565c51c9ddfb66f9124c892a0ae05bb0d6d854fb87c",
+      "http_metadata_path": null,
+      "http_status": 200,
+      "body_stage": "rendered_or_authored_utf8",
+      "saved_file_encoding": "utf-8",
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    },
+    {
+      "page_id": "chapter_1_page_2",
+      "requested_url": "https://synthetic.invalid/pagination/ch1-2",
+      "final_url": "https://synthetic.invalid/pagination/ch1-2",
+      "captured_at": "2026-09-17T00:00:00+08:00",
+      "input_kind": "SYNTHETIC_HTML",
+      "input_path": "chapter_1_page_2.html",
+      "input_sha256": "236380d5cc613751379e9370e77ffa0583ac20cad75430b46cedfd96a8569305",
+      "http_metadata_path": null,
+      "http_status": 200,
+      "body_stage": "rendered_or_authored_utf8",
+      "saved_file_encoding": "utf-8",
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    },
+    {
+      "page_id": "chapter_2",
+      "requested_url": "https://synthetic.invalid/pagination/ch2",
+      "final_url": "https://synthetic.invalid/pagination/ch2",
+      "captured_at": "2026-09-17T00:00:00+08:00",
+      "input_kind": "SYNTHETIC_HTML",
+      "input_path": "chapter_2.html",
+      "input_sha256": "4657bfed88fd18b8f1bdc53641b8f91e162f11960a80760a5e239d6fde8327d6",
+      "http_metadata_path": null,
+      "http_status": 200,
+      "body_stage": "rendered_or_authored_utf8",
+      "saved_file_encoding": "utf-8",
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    }
+  ],
+  "expected_path": "expected.json",
+  "rights_and_privacy": {
+    "publication_status": "PUBLIC_SYNTHETIC",
+    "permission_or_license_reference": "project-authored synthetic fixture",
+    "sensitive_fields_removed": true,
+    "original_and_transformed_inputs_tracked_separately": true,
+    "review_notes": [
+      "No third-party webpage or novel text is included."
+    ]
+  },
+  "notes": [
+    "Synthetic regression input; never count as a real-site fixture."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "requested_url": "https://synthetic.invalid/access/200",
+  "final_url": "https://synthetic.invalid/access/200",
+  "status": 200,
+  "headers": {
+    "content-type": "text/html; charset=utf-8",
+    "server": "synthetic-gateway"
+  }
+}

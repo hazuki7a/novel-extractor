@@ -1,0 +1,1304 @@
+{
+  "schema_version": "1.0.0",
+  "plan_name": "Chinese Novel Extraction Benchmark",
+  "created_on": "2026-09-16",
+  "artifact_type": "candidate_collection_plan",
+  "not_a_completed_dataset": true,
+  "primary_goal": "评估无预定义书源的中文小说网页解析；不以突破访问限制为目标。",
+  "source_policy": "沿用上一轮20个来源；本次只做来源入口核验。站点特征、字节编码和提取结果须通过本地快照确认。",
+  "summary": {
+    "candidate_count": 20,
+    "chinese_primary_candidates": 15,
+    "special_candidates": 5,
+    "collected_real_html_fixtures": 0,
+    "reviewed_real_cases": 0
+  },
+  "stages": [
+    "select_and_review",
+    "capture",
+    "annotate",
+    "review_labels",
+    "offline_evaluate",
+    "freeze_report"
+  ],
+  "suites": {
+    "CN_STATIC_CONTENT": "已确认输入内包含目标中文内容的静态/离线正文正例",
+    "CN_ACCESS_STATE": "验证页、登录、付费提示、限流等状态识别",
+    "CN_DYNAMIC_INPUT": "对照 HTTP 初始响应和授权浏览器渲染 DOM",
+    "CROSS_LANGUAGE": "日文/英文泛化，不计入中文主指标",
+    "NON_HTML_NEGATIVE": "扫描/阅读器/非正文入口等不适用输入",
+    "ENCODING": "解码前字节及编码质量专项",
+    "SYNTHETIC_REGRESSION": "自制确定性样例，单列，不冒充真实站点"
+  },
+  "global_defaults": {
+    "network_allowed_during_offline_tests": false,
+    "automatically_crawl_site_entries": false,
+    "site_hints_allowed_as_parser_input": false,
+    "expected_labels_allowed_as_parser_input": false,
+    "capture_per_host_concurrency": 1,
+    "capture_min_delay_seconds": 3,
+    "capture_max_retries": 1,
+    "capture_limits_are_project_defaults_not_permission": true,
+    "blocked_page_policy": "stop_or_record_state; no automatic escalation after explicit access denial",
+    "raw_inputs_publish_by_default": false
+  },
+  "splits": {
+    "policy": "按网站和共享模板家族分组，不按同站章节随机切分",
+    "development": "规则和阈值开发；可以反复检查",
+    "validation": "方案选择和调参；会被间接使用，不是最终独立证明",
+    "test": "冻结后不参与调参；查看错误后再调参即视为已用于开发，需新留出组",
+    "cross_language": "独立泛化报告",
+    "assignment": "待样本实际采集并识别模板家族后分配，不预造20站的训练/测试成绩"
+  },
+  "coverage_plan": [
+    {
+      "feature": "p_paragraphs",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "17k",
+        "qimao",
+        "wikisource_zh"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "需要真实快照；候选站点不等于已覆盖"
+    },
+    {
+      "feature": "br_paragraphs",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "尚无本地已确认真实来源；可先自制最小 HTML"
+    },
+    {
+      "feature": "table_layout",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "补充中文旧式 table 布局；20站名单未保证覆盖"
+    },
+    {
+      "feature": "gbk_gb2312_gb18030",
+      "suite": "ENCODING",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "必须保留解码前字节；老站身份不是编码证据"
+    },
+    {
+      "feature": "encoding_conflict",
+      "suite": "ENCODING",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "先用自制字节样本构造 header/meta 冲突，另补真实案例"
+    },
+    {
+      "feature": "content_pagination",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "需要同一章至少两页和下一章；不能从章节标题的上/下推定网页分页"
+    },
+    {
+      "feature": "catalog_pagination",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "需要至少两个目录页及重叠边界；尚未采集"
+    },
+    {
+      "feature": "catalog_descending",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "zongheng"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "候选目标，需以具体快照及导航证据确认"
+    },
+    {
+      "feature": "volume_number_reset",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "sfacg"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "分卷文本已检索到；真实 DOM 和章节阅读序需本地标注"
+    },
+    {
+      "feature": "random_urls",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "先构造可复现样例；需补真实非连续 URL 页面链"
+    },
+    {
+      "feature": "no_catalog",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "记录明确 next/previous 链；没有链接不得编造整本顺序"
+    },
+    {
+      "feature": "comments_ads",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "jjwxc",
+        "qidian"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "候选干扰场景；保留真实段落结构"
+    },
+    {
+      "feature": "traditional_simplified",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "wikisource_zh"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "同模板繁简样本不能拆到开发集和最终测试集"
+    },
+    {
+      "feature": "single_file_fragment_chapters",
+      "suite": "CN_STATIC_CONTENT",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "gutenberg_zh"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "按具体作品确认；保留章节锚点身份"
+    },
+    {
+      "feature": "restricted_pages",
+      "suite": "CN_ACCESS_STATE",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "qidian",
+        "douban_read"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "采集当次实际提示；不由站点名称强行打标签"
+    },
+    {
+      "feature": "anti_bot",
+      "suite": "CN_ACCESS_STATE",
+      "phase": "MVP",
+      "candidate_site_ids": [
+        "99csw"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "当前仅有用户日志，还缺对应 HTTP 响应体"
+    },
+    {
+      "feature": "dynamic_dom",
+      "suite": "CN_DYNAMIC_INPUT",
+      "phase": "V2",
+      "candidate_site_ids": [
+        "fanqie",
+        "gongzicp",
+        "qimao"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "必须有原始响应/渲染 DOM 对照；不能用工具空输出断言 SPA"
+    },
+    {
+      "feature": "shift_jis",
+      "suite": "CROSS_LANGUAGE",
+      "phase": "optional",
+      "candidate_site_ids": [
+        "aozora"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "文件有编码声明；编码正确性仍以字节和人工核对为准"
+    },
+    {
+      "feature": "non_html_reader",
+      "suite": "NON_HTML_NEGATIVE",
+      "phase": "optional",
+      "candidate_site_ids": [
+        "openlibrary"
+      ],
+      "coverage_status": "NOT_YET_CAPTURED",
+      "action": "BookReader 文档不是实际 fixture"
+    }
+  ],
+  "sites": [
+    {
+      "id": "qidian",
+      "number": 1,
+      "name": "起点中文网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.qidian.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "FETCH_UNCONFIRMED",
+        "source_ids": [
+          "S01"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "catalog_candidate",
+          "url": "https://www.qidian.com/book/1046540075/catalog/",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "volumes",
+        "chapter_titles",
+        "access_state",
+        "metadata"
+      ],
+      "sampling_instruction": "先选一个可公开访问的作品目录及相邻免费章节；免费/VIP均须现场确认。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "本次检索未取得可用于确认目录结构的正文；需本地核验。"
+      ]
+    },
+    {
+      "id": "zongheng",
+      "number": 2,
+      "name": "纵横中文网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.zongheng.com/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_TEXT_OBSERVED",
+        "source_ids": [
+          "S02"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "book_or_catalog_candidate",
+          "url": "https://www.zongheng.com/detail/1415876?tabsName=catalogue",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "catalog_direction",
+        "catalog_grouping",
+        "navigation",
+        "metadata"
+      ],
+      "sampling_instruction": "优先寻找可切换排序或具有编号序列的目录；不要预先把这个示例标为倒序。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回作品页；本次未确认升序/倒序控件或完整目录。"
+      ]
+    },
+    {
+      "id": "17k",
+      "number": 3,
+      "name": "17K小说网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.17k.com/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_OBSERVED",
+        "source_ids": [
+          "S03"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "catalog_grouping",
+        "navigation",
+        "content_extraction",
+        "metadata"
+      ],
+      "sampling_instruction": "从首页选一个免费作品，再固定作品页、目录和相邻章节；尚无具体已采集样本。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回首页；尚未采集具体章节快照。"
+      ]
+    },
+    {
+      "id": "qimao",
+      "number": 4,
+      "name": "七猫中文网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.qimao.com/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_TEXT_OBSERVED",
+        "source_ids": [
+          "S04"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "chapter_candidate",
+          "url": "https://www.qimao.com/shuku/1924588-17384585090116/",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "metadata",
+        "navigation",
+        "content_availability",
+        "render_mode"
+      ],
+      "sampling_instruction": "示例已见元数据和导航文本，但要确认原始响应里是否有完整正文，再归入静态或动态组。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可见章节标题、书名、作者、上一章和下一章；未据此确认完整正文已获取。"
+      ]
+    },
+    {
+      "id": "fanqie",
+      "number": 5,
+      "name": "番茄小说",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://fanqienovel.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_OBSERVED",
+        "source_ids": [
+          "S05"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "render_mode",
+        "content_extraction",
+        "catalog_grouping"
+      ],
+      "sampling_instruction": "对同一章分别记录原始响应和浏览器 DOM，是否动态渲染由两份输入的差异确定。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回首页；具体章节的原始响应及渲染方式待核验。"
+      ]
+    },
+    {
+      "id": "sfacg",
+      "number": 6,
+      "name": "SF轻小说",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://book.sfacg.com/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_TEXT_OBSERVED",
+        "source_ids": [
+          "S06"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "catalog_candidate",
+          "url": "https://book.sfacg.com/Novel/198140/MainIndex/",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "volumes",
+        "special_chapters",
+        "chapter_titles",
+        "catalog_grouping"
+      ],
+      "sampling_instruction": "从分卷目录中选择楔子和相邻章节；检查卷边界、编号重置，不把卷标题输出成正文。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可见分卷标题、楔子及章节链接文本。"
+      ]
+    },
+    {
+      "id": "ciweimao",
+      "number": 7,
+      "name": "刺猬猫",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.ciweimao.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ALTERNATE_ENTRY_OBSERVED",
+        "source_ids": [
+          "S07"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "mobile_entry",
+          "url": "https://wap.ciweimao.com/",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "desktop_mobile_templates",
+        "access_state",
+        "navigation"
+      ],
+      "sampling_instruction": "桌面和移动页面归为同一站点组；仅在确实存在不同模板时分别采样。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "官方移动入口可检索；桌面入口本次抓取失败，原因未确定。"
+      ]
+    },
+    {
+      "id": "jjwxc",
+      "number": 8,
+      "name": "晋江文学城",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.jjwxc.net/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_OBSERVED",
+        "source_ids": [
+          "S08"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "special_chapters",
+        "metadata",
+        "access_state",
+        "encoding_probe"
+      ],
+      "sampling_instruction": "选具体作品再确认标题和章节权限；不预设该站一定使用 GBK。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回首页；具体作品、编码与访问状态待本地采集。"
+      ]
+    },
+    {
+      "id": "gongzicp",
+      "number": 9,
+      "name": "长佩文学",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.gongzicp.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_OBSERVED",
+        "source_ids": [
+          "S09"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "render_mode",
+        "access_state",
+        "catalog_grouping"
+      ],
+      "sampling_instruction": "对同一公开页面比较 HTTP 和浏览器 DOM；不预设 SPA 或固定 403。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回首页；不能由此确定全部章节是 SPA、可静态抓取或受到反爬限制。"
+      ]
+    },
+    {
+      "id": "douban_read",
+      "number": 10,
+      "name": "豆瓣阅读",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://read.douban.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_ONLY_LIMITED_TEXT",
+        "source_ids": [
+          "S10"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "metadata",
+        "preview_vs_fulltext",
+        "access_state"
+      ],
+      "sampling_instruction": "明确区分作品介绍、试读正文、完整章节和购买提示。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "本次检索返回内容有限；具体作品和章节待本地确认。"
+      ]
+    },
+    {
+      "id": "faloo",
+      "number": 11,
+      "name": "飞卢中文网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://b.faloo.com/",
+      "priority": "P3",
+      "candidate_status": "NEEDS_ENTRY_CONFIRMATION",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "FETCH_UNCONFIRMED",
+        "source_ids": [
+          "S11"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "access_state",
+        "catalog_grouping",
+        "metadata"
+      ],
+      "sampling_instruction": "先在本地确认正常阅读入口；检索失败不等同于已取得反爬测试样本。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "本次检索抓取失败；不能把工具失败直接解释为该站 403 或离线。"
+      ]
+    },
+    {
+      "id": "shuqi",
+      "number": 12,
+      "name": "书旗中文网",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.shuqi.com/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_SEARCH_OBSERVED",
+        "source_ids": [
+          "S12"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "entry",
+          "url": "https://www.shuqi.com/home",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "entry_discovery",
+        "desktop_mobile_templates",
+        "content_availability"
+      ],
+      "sampling_instruction": "先定位网页正文入口，不能把 APP 推广页或作品营销页当章节。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "官方页面可被检索；阅读入口和章节正文获取方式仍待确认。"
+      ]
+    },
+    {
+      "id": "cmread",
+      "number": 13,
+      "name": "咪咕文学",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.cmread.com/",
+      "priority": "P3",
+      "candidate_status": "NEEDS_ENTRY_CONFIRMATION",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_REQUIRES_REVIEW",
+        "source_ids": [
+          "S13"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "entry_discovery",
+        "non_reader_page_rejection"
+      ],
+      "sampling_instruction": "当前入口是作者服务平台；没有确认阅读页前，保持待确认，不计入静态正文必过集合。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "当前入口转向作者服务平台，需重新确认是否存在适合本项目的网页阅读入口。"
+      ]
+    },
+    {
+      "id": "wikisource_zh",
+      "number": 14,
+      "name": "中文维基文库",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://zh.wikisource.org/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_TEXT_OBSERVED",
+        "source_ids": [
+          "S14"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "catalog_candidate",
+          "url": "https://zh.wikisource.org/zh-hans/三國志演義",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "classical_hui_titles",
+        "traditional_simplified",
+        "hierarchical_catalog",
+        "navigation"
+      ],
+      "sampling_instruction": "从三国演义目录选择相邻两至三回；简繁版本和同模板作品放在同一分组。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "可见序、凡例、第一回等目录；作为中文古典章节结构候选。"
+      ]
+    },
+    {
+      "id": "gutenberg_zh",
+      "number": 15,
+      "name": "Project Gutenberg中文书库",
+      "language": "zh",
+      "candidate_pool": "CN_PRIMARY",
+      "entry_url": "https://www.gutenberg.org/browse/languages/zh",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_TEXT_OBSERVED",
+        "source_ids": [
+          "S15",
+          "S21",
+          "S22"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "single_document_book",
+        "in_page_chapters",
+        "metadata",
+        "boilerplate"
+      ],
+      "sampling_instruction": "按官方获取说明选择一个中文 HTML 文件；目录锚点可能指向同一文件内章节，不能盲目删除 URL fragment。",
+      "suggested_initial_page_budget": 1,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "中文书目入口；需选具体作品及 HTML 文件，不把书目入口本身当小说正文。",
+        "常规页面访问和自动化获取有区别，应采用其列明的方式，不将站点作为随意批量抓取目标。",
+        "提供离线目录相关信息。"
+      ]
+    },
+    {
+      "id": "99csw",
+      "number": 16,
+      "name": "99藏书网",
+      "language": "zh",
+      "candidate_pool": "SPECIAL",
+      "entry_url": "https://www.99csw.com/",
+      "priority": "P1",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "user_diagnostic",
+        "level": "USER_DIAGNOSTIC_ONLY",
+        "source_ids": [
+          "S16"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "user_diagnostic_url",
+          "url": "https://www.99csw.com/book/6334/219452.htm",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "anti_bot_rejection",
+        "false_metadata_rejection",
+        "confidence_gating"
+      ],
+      "sampling_instruction": "先保存对应原始响应或另建明确标为 synthetic 的验证页；现有分析日志不能冒充 HTML fixture。",
+      "suggested_initial_page_budget": 1,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "对 https://www.99csw.com/book/6334/219452.htm 的一次用户请求返回 403，预览为 Enable JavaScript and cookies to continue。现有证据是解析日志，不是原始 HTML 快照；不代表该站永久返回相同结果。"
+      ]
+    },
+    {
+      "id": "aozora",
+      "number": 17,
+      "name": "青空文庫",
+      "language": "ja",
+      "candidate_pool": "SPECIAL",
+      "entry_url": "https://www.aozora.gr.jp/",
+      "priority": "P2",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "OFFICIAL_ENCODING_DECLARATION",
+        "source_ids": [
+          "S17"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "book_card",
+          "url": "https://www.aozora.gr.jp/cards/000879/card1129.html",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "shift_jis",
+        "ruby_annotations",
+        "cross_language"
+      ],
+      "sampling_instruction": "从图书卡进入 XHTML，保存解码前字节；Shift-JIS 仅针对已声明的具体文件核验。",
+      "suggested_initial_page_budget": 1,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "图书卡将对应 XHTML 标为 JIS X 0208 / ShiftJIS；仍需保存该文件的解码前字节做编码测试。"
+      ]
+    },
+    {
+      "id": "royalroad",
+      "number": 18,
+      "name": "Royal Road",
+      "language": "en",
+      "candidate_pool": "SPECIAL",
+      "entry_url": "https://www.royalroad.com/",
+      "priority": "P3",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "ENTRY_OBSERVED",
+        "source_ids": [
+          "S18"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "cross_language",
+        "special_chapters",
+        "catalog_grouping"
+      ],
+      "sampling_instruction": "选择一个公开作品及短章节链；英文指标单独报告，不与中文结果合并。",
+      "suggested_initial_page_budget": 5,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "检索可返回首页；具体作品和目录结构待本地选样。"
+      ]
+    },
+    {
+      "id": "standardebooks",
+      "number": 19,
+      "name": "Standard Ebooks",
+      "language": "en",
+      "candidate_pool": "SPECIAL",
+      "entry_url": "https://standardebooks.org/",
+      "priority": "P3",
+      "candidate_status": "NEEDS_ENTRY_CONFIRMATION",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "FETCH_UNCONFIRMED",
+        "source_ids": [
+          "S19"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [],
+      "test_hypotheses": [
+        "semantic_html",
+        "single_document_book",
+        "cross_language"
+      ],
+      "sampling_instruction": "作为规范结构的候选对照；本次检索未取到页面，先完成本地入口核验。",
+      "suggested_initial_page_budget": 1,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "本次首页和此前作品入口均抓取失败，规范 HTML / 在线阅读等预期仍作为待核验采样目标。"
+      ]
+    },
+    {
+      "id": "openlibrary",
+      "number": 20,
+      "name": "Open Library",
+      "language": "en",
+      "candidate_pool": "SPECIAL",
+      "entry_url": "https://openlibrary.org/",
+      "priority": "P3",
+      "candidate_status": "AWAITING_LOCAL_CAPTURE",
+      "source_review": {
+        "checked_on": "2026-09-16",
+        "method": "web_retrieval_not_local_http_test",
+        "level": "DOCUMENTATION_ONLY",
+        "source_ids": [
+          "S20"
+        ],
+        "raw_html_inspected": false,
+        "local_extractor_tested": false
+      },
+      "seed_pages": [
+        {
+          "role": "documentation_only",
+          "url": "https://openlibrary.org/dev/docs/bookreader",
+          "is_executable_fixture": false
+        }
+      ],
+      "test_hypotheses": [
+        "non_html_reader",
+        "scanned_book",
+        "unsupported_input"
+      ],
+      "sampling_instruction": "另选具体可访问的 BookReader 条目；文档页不等于阅读器页，不把扫描书作为静态小说提取正例。",
+      "suggested_initial_page_budget": 1,
+      "validated_features": [],
+      "encoding_verified_from_bytes": null,
+      "template_family": null,
+      "dataset_split": "unassigned",
+      "actual_fixture_count": 0,
+      "live_fetch": {
+        "enabled_by_default": false,
+        "authorization_review": "pending",
+        "automatic_browser_escalation": false
+      },
+      "publication_review": "pending",
+      "notes": [
+        "官方文档介绍 BookReader。文档页不是阅读器测试样本；需另选可访问的具体条目。"
+      ]
+    }
+  ],
+  "sources": {
+    "S01": {
+      "title": "起点中文网：此前选定的目录入口",
+      "url": "https://www.qidian.com/book/1046540075/catalog/",
+      "observation": "本次检索未取得可用于确认目录结构的正文；需本地核验。"
+    },
+    "S02": {
+      "title": "纵横中文网：作品入口",
+      "url": "https://www.zongheng.com/detail/1415876?tabsName=catalogue",
+      "observation": "检索可返回作品页；本次未确认升序/倒序控件或完整目录。"
+    },
+    "S03": {
+      "title": "17K 小说网",
+      "url": "https://www.17k.com/",
+      "observation": "检索可返回首页；尚未采集具体章节快照。"
+    },
+    "S04": {
+      "title": "七猫：章节页示例",
+      "url": "https://www.qimao.com/shuku/1924588-17384585090116/",
+      "observation": "检索可见章节标题、书名、作者、上一章和下一章；未据此确认完整正文已获取。"
+    },
+    "S05": {
+      "title": "番茄小说",
+      "url": "https://fanqienovel.com/",
+      "observation": "检索可返回首页；具体章节的原始响应及渲染方式待核验。"
+    },
+    "S06": {
+      "title": "SF 轻小说：归何处目录",
+      "url": "https://book.sfacg.com/Novel/198140/MainIndex/",
+      "observation": "检索可见分卷标题、楔子及章节链接文本。"
+    },
+    "S07": {
+      "title": "刺猬猫移动站",
+      "url": "https://wap.ciweimao.com/",
+      "observation": "官方移动入口可检索；桌面入口本次抓取失败，原因未确定。"
+    },
+    "S08": {
+      "title": "晋江文学城",
+      "url": "https://www.jjwxc.net/",
+      "observation": "检索可返回首页；具体作品、编码与访问状态待本地采集。"
+    },
+    "S09": {
+      "title": "长佩文学",
+      "url": "https://www.gongzicp.com/",
+      "observation": "检索可返回首页；不能由此确定全部章节是 SPA、可静态抓取或受到反爬限制。"
+    },
+    "S10": {
+      "title": "豆瓣阅读",
+      "url": "https://read.douban.com/",
+      "observation": "本次检索返回内容有限；具体作品和章节待本地确认。"
+    },
+    "S11": {
+      "title": "飞卢中文网候选入口",
+      "url": "https://b.faloo.com/",
+      "observation": "本次检索抓取失败；不能把工具失败直接解释为该站 403 或离线。"
+    },
+    "S12": {
+      "title": "书旗中文网",
+      "url": "https://www.shuqi.com/home",
+      "observation": "官方页面可被检索；阅读入口和章节正文获取方式仍待确认。"
+    },
+    "S13": {
+      "title": "咪咕文学",
+      "url": "https://www.cmread.com/index",
+      "observation": "当前入口转向作者服务平台，需重新确认是否存在适合本项目的网页阅读入口。"
+    },
+    "S14": {
+      "title": "中文维基文库：三国演义",
+      "url": "https://zh.wikisource.org/zh-hans/三國志演義",
+      "observation": "可见序、凡例、第一回等目录；作为中文古典章节结构候选。"
+    },
+    "S15": {
+      "title": "Project Gutenberg：中文书目",
+      "url": "https://www.gutenberg.org/browse/languages/zh",
+      "observation": "中文书目入口；需选具体作品及 HTML 文件，不把书目入口本身当小说正文。"
+    },
+    "S16": {
+      "title": "用户提供的 99 藏书网分析日志",
+      "url": null,
+      "observation": "对 https://www.99csw.com/book/6334/219452.htm 的一次用户请求返回 403，预览为 Enable JavaScript and cookies to continue。现有证据是解析日志，不是原始 HTML 快照；不代表该站永久返回相同结果。"
+    },
+    "S17": {
+      "title": "青空文库：霜夜图书卡",
+      "url": "https://www.aozora.gr.jp/cards/000879/card1129.html",
+      "observation": "图书卡将对应 XHTML 标为 JIS X 0208 / ShiftJIS；仍需保存该文件的解码前字节做编码测试。"
+    },
+    "S18": {
+      "title": "Royal Road",
+      "url": "https://www.royalroad.com/home",
+      "observation": "检索可返回首页；具体作品和目录结构待本地选样。"
+    },
+    "S19": {
+      "title": "Standard Ebooks 候选入口",
+      "url": "https://standardebooks.org/",
+      "observation": "本次首页和此前作品入口均抓取失败，规范 HTML / 在线阅读等预期仍作为待核验采样目标。"
+    },
+    "S20": {
+      "title": "Open Library：BookReader 文档",
+      "url": "https://openlibrary.org/dev/docs/bookreader",
+      "observation": "官方文档介绍 BookReader。文档页不是阅读器测试样本；需另选可访问的具体条目。"
+    },
+    "S21": {
+      "title": "Project Gutenberg：Robot Access",
+      "url": "https://www.gutenberg.org/policy/robot_access.html",
+      "observation": "常规页面访问和自动化获取有区别，应采用其列明的方式，不将站点作为随意批量抓取目标。"
+    },
+    "S22": {
+      "title": "Project Gutenberg：Offline Catalogs",
+      "url": "https://www.gutenberg.org/ebooks/offline_catalogs.html",
+      "observation": "提供离线目录相关信息。"
+    },
+    "S23": {
+      "title": "HTTPX：Text Encodings",
+      "url": "https://www.python-httpx.org/advanced/text-encodings/",
+      "observation": "说明响应文本解码及默认编码策略；用于说明字节输入与解码文本不是同一测试对象。"
+    },
+    "S24": {
+      "title": "scikit-learn：Grouped Cross-validation",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-iterators-for-grouped-data",
+      "observation": "支持按组隔离训练与测试；本指南将网站和模板家族作为建议分组依据。"
+    }
+  },
+  "feature_definitions": {
+    "volumes": "分卷结构",
+    "chapter_titles": "中文章节标题",
+    "access_state": "访问与权限状态",
+    "metadata": "书名与作者",
+    "catalog_direction": "目录方向",
+    "catalog_grouping": "目录链接分组",
+    "navigation": "前后章导航",
+    "content_extraction": "正文区域",
+    "content_availability": "正文是否实际存在于输入",
+    "render_mode": "原始响应与渲染 DOM",
+    "special_chapters": "楔子、番外等特殊章节",
+    "desktop_mobile_templates": "桌面与移动模板",
+    "encoding_probe": "实际编码核验",
+    "preview_vs_fulltext": "简介、试读与全文区分",
+    "entry_discovery": "阅读入口发现",
+    "non_reader_page_rejection": "排除非阅读页面",
+    "classical_hui_titles": "古典“第X回”标题",
+    "traditional_simplified": "简体与繁体",
+    "hierarchical_catalog": "层级目录",
+    "single_document_book": "单文件整本书",
+    "in_page_chapters": "页内章节锚点",
+    "boilerplate": "头尾说明文字",
+    "anti_bot_rejection": "验证页识别与安全停止",
+    "false_metadata_rejection": "不输出伪书名",
+    "confidence_gating": "异常输入限制正文评分",
+    "shift_jis": "Shift-JIS字节解码",
+    "ruby_annotations": "日文注音标记",
+    "cross_language": "跨语言泛化",
+    "semantic_html": "语义化 HTML 候选",
+    "non_html_reader": "非普通 HTML 阅读器",
+    "scanned_book": "扫描书输入",
+    "unsupported_input": "不适用输入识别"
+  }
+}

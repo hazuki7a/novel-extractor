@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "case_template",
+  "annotation_status": "DRAFT",
+  "case_id": null,
+  "site_id": null,
+  "suite": null,
+  "scenario_tags": [],
+  "dataset_split": "unassigned",
+  "template_family": null,
+  "capture_scope": "sampled_subgraph",
+  "source_type": null,
+  "created_at": null,
+  "reviewed_at": null,
+  "input_root": null,
+  "pages": [
+    {
+      "page_id": "page_001",
+      "requested_url": null,
+      "final_url": null,
+      "captured_at": null,
+      "input_kind": null,
+      "input_path": null,
+      "input_sha256": null,
+      "http_metadata_path": null,
+      "http_status": null,
+      "body_stage": null,
+      "saved_file_encoding": null,
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    }
+  ],
+  "expected_path": "expected.json",
+  "rights_and_privacy": {
+    "publication_status": "PRIVATE_PENDING_REVIEW",
+    "permission_or_license_reference": null,
+    "sensitive_fields_removed": false,
+    "original_and_transformed_inputs_tracked_separately": false,
+    "review_notes": []
+  },
+  "notes": [
+    "这是空白标注模板，不是可执行用例。",
+    "input_kind 选择 HTTP_BYTES、BROWSER_DOM 或 SYNTHETIC_HTML；HTTP_BYTES 为内容解压后、字符解码前的响应体字节。",
+    "source_type 选择 real_capture 或 synthetic。不能将自制 HTML 声称为真实站点抓取结果。",
+    "网页来源编码与 UTF-8 保存的浏览器 DOM 编码必须分开。",
+    "没有权限证明或隐私检查时保持私有。"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_case",
+  "annotation_status": "READY",
+  "case_id": "syn_encoding_bytes",
+  "site_id": "synthetic",
+  "suite": "SYNTHETIC_REGRESSION",
+  "scenario_tags": [
+    "gbk_gb18030",
+    "encoding_conflict"
+  ],
+  "dataset_split": "development",
+  "template_family": "synthetic:syn_encoding_bytes",
+  "capture_scope": "sampled_subgraph",
+  "source_type": "synthetic",
+  "created_at": "2026-09-17T00:00:00+08:00",
+  "reviewed_at": "2026-09-17T00:00:00+08:00",
+  "input_root": "../../fixtures/synthetic/syn_encoding_bytes",
+  "entry_page_id": null,
+  "pages": [
+    {
+      "page_id": "gb18030_page",
+      "requested_url": "https://synthetic.invalid/encoding/gb",
+      "final_url": "https://synthetic.invalid/encoding/gb",
+      "captured_at": "2026-09-17T00:00:00+08:00",
+      "input_kind": "HTTP_BYTES",
+      "input_path": "gb18030_page.bin",
+      "input_sha256": "c909aad56d03b6da04bf86218c76e3e8fa86837a975a112dbe270961db8043cd",
+      "http_metadata_path": "gb18030_page_http.json",
+      "http_status": 200,
+      "body_stage": "decompressed_before_character_decoding",
+      "saved_file_encoding": null,
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    },
+    {
+      "page_id": "conflict_page",
+      "requested_url": "https://synthetic.invalid/encoding/conflict",
+      "final_url": "https://synthetic.invalid/encoding/conflict",
+      "captured_at": "2026-09-17T00:00:00+08:00",
+      "input_kind": "HTTP_BYTES",
+      "input_path": "conflict_page.bin",
+      "input_sha256": "ef036ebf0e7af6794843d8202659596a4c6cdaacace22c33901b8cc238e3c118",
+      "http_metadata_path": "conflict_page_http.json",
+      "http_status": 200,
+      "body_stage": "decompressed_before_character_decoding",
+      "saved_file_encoding": null,
+      "declared_http_charset": null,
+      "declared_meta_charset": null,
+      "verified_source_encoding": null,
+      "browser": null,
+      "rendered_from_page_id": null,
+      "notes": []
+    }
+  ],
+  "expected_path": "expected.json",
+  "rights_and_privacy": {
+    "publication_status": "PUBLIC_SYNTHETIC",
+    "permission_or_license_reference": "project-authored synthetic fixture",
+    "sensitive_fields_removed": true,
+    "original_and_transformed_inputs_tracked_separately": true,
+    "review_notes": [
+      "No third-party webpage or novel text is included."
+    ]
+  },
+  "notes": [
+    "Synthetic regression input; never count as a real-site fixture."
+  ]
+}

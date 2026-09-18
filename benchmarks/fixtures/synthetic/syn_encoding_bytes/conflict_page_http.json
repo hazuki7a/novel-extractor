@@ -1,0 +1,8 @@
+{
+  "requested_url": "https://synthetic.invalid/encoding/conflict",
+  "final_url": "https://synthetic.invalid/encoding/conflict",
+  "status": 200,
+  "headers": {
+    "content-type": "text/html; charset=gbk"
+  }
+}

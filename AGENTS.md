@@ -29,3 +29,35 @@
 ```
 
 发布前还要检查 `git status --short`，确认提交清单不含本地文件或版权内容。
+
+## Benchmark rules
+
+Before creating, modifying, or running benchmark-related code or fixtures,
+you MUST read `BENCHMARK_GUIDE.md` first and follow it.
+
+The benchmark guide is the source of truth for:
+
+- fixture collection
+- expected result annotation
+- benchmark categories
+- metric definitions
+- failure classification
+- reporting
+- regression testing
+
+Do not change benchmark definitions or expected results merely to make tests pass.
+
+Do not add website-specific host, class, id, CSS selector, or XPath logic
+to improve benchmark scores.
+
+When benchmark results fail, investigate the failure before modifying either
+the algorithm or expected output.
+
+When running benchmarks:
+
+1. Separate synthetic, real_fixture, and challenge results.
+2. Treat `expected.json` as human-labeled ground truth.
+3. Never regenerate expected results from the parser being tested.
+4. Report failed cases individually.
+5. Preserve baseline reports for regression comparison.
+6. Do not access live websites during the default offline benchmark.

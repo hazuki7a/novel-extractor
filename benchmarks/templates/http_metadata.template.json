@@ -1,0 +1,16 @@
+{
+  "requested_url": null,
+  "final_url": null,
+  "status": null,
+  "captured_at": null,
+  "headers": {
+    "content-type": null,
+    "content-language": null,
+    "content-encoding": null,
+    "etag": null,
+    "last-modified": null
+  },
+  "body_stage": "decompressed_before_character_decoding",
+  "sensitive_headers_removed": false,
+  "notes": []
+}

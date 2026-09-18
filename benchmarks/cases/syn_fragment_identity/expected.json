@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_fragment_identity",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "fragment_1",
+      "page_type": "BOOK_PAGE",
+      "access_status": "OK",
+      "content_status": null,
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第一章",
+      "content_reference_path": null,
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "fragment_2",
+      "page_type": "BOOK_PAGE",
+      "access_status": "OK",
+      "content_status": null,
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第二章",
+      "content_reference_path": null,
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    }
+  ],
+  "logical_chapters": [
+    {
+      "chapter_id": "c1",
+      "title": "第一章",
+      "source_page_ids": [
+        "fragment_1"
+      ],
+      "reference_text_path": null,
+      "complete_within_case": true
+    },
+    {
+      "chapter_id": "c2",
+      "title": "第二章",
+      "source_page_ids": [
+        "fragment_2"
+      ],
+      "reference_text_path": null,
+      "complete_within_case": true
+    }
+  ],
+  "expected_reading_order": [
+    "c1",
+    "c2"
+  ],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

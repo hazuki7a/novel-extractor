@@ -1,0 +1,2247 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_report",
+  "run_status": "COMPLETED_WITH_FAILURES",
+  "run_id": "offline-20260917-092247",
+  "generated_at": "2026-09-17T09:22:47",
+  "code_commit": "d4493d997be747615aa5a3dc361c06dc8e2ee3bc",
+  "code_dirty": true,
+  "dataset_version": "synthetic-contract-v1",
+  "dataset_hash": "88a463c5831dbd0b198fea6612d96934b9647c1199302ae0b6134428400bc5ed",
+  "dependency_lock_hash": null,
+  "dependency_manifest_hash": "723257660ecc1165b2709c6be0e3ca3ee1afd7b8f7131d8e314483fb5b469f4a",
+  "configuration_hash": "9d7d63c039f5cf14557b4bf558cbe2af183d07ceec4b5f75346de2351ebcadc3",
+  "network_allowed": false,
+  "input_mode": "case-declared mixed offline inputs",
+  "cache_mode": "cold",
+  "dataset_split": "development",
+  "case_counts": {
+    "eligible": 8,
+    "executed": 8,
+    "invalid": 0,
+    "deferred": 0,
+    "failed": 8
+  },
+  "results_by_suite": {
+    "CN_STATIC_CONTENT": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "CN_ACCESS_STATE": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "CN_DYNAMIC_INPUT": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "CROSS_LANGUAGE": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "NON_HTML_NEGATIVE": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "ENCODING": {
+      "case_count": 0,
+      "metrics": null
+    },
+    "SYNTHETIC_REGRESSION": {
+      "case_count": 8,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 17,
+          "denominator": 23,
+          "value": 0.73913,
+          "sample_count": 23,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 16,
+          "denominator": 18,
+          "value": 0.888889,
+          "sample_count": 18,
+          "abstention_count": 1
+        },
+        "access_status_accuracy": {
+          "numerator": 22,
+          "denominator": 23,
+          "value": 0.956522,
+          "sample_count": 23,
+          "abstention_count": 0
+        },
+        "metadata_suppression": {
+          "numerator": 0,
+          "denominator": 2,
+          "value": 0.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "unsafe_body_rejection": {
+          "numerator": 5,
+          "denominator": 5,
+          "value": 1.0,
+          "sample_count": 5,
+          "abstention_count": 0
+        },
+        "body_noise_exclusion": {
+          "numerator": 2,
+          "denominator": 3,
+          "value": 0.666667,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "catalog_recall": {
+          "numerator": 8,
+          "denominator": 15,
+          "value": 0.533333,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "catalog_precision": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "catalog_direction_accuracy": {
+          "numerator": 0,
+          "denominator": 3,
+          "value": 0.0,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 6262,
+          "denominator": 7078,
+          "value": 0.884713,
+          "sample_count": 20,
+          "abstention_count": 1
+        },
+        "content_precision_chars": {
+          "numerator": 6262,
+          "denominator": 7555,
+          "value": 0.828855,
+          "sample_count": 20,
+          "abstention_count": 1
+        },
+        "logical_chapter_presence": {
+          "numerator": 4,
+          "denominator": 9,
+          "value": 0.444444,
+          "sample_count": 9,
+          "abstention_count": 0
+        },
+        "pagination_merge_accuracy": {
+          "numerator": 2,
+          "denominator": 4,
+          "value": 0.5,
+          "sample_count": 4,
+          "abstention_count": 0
+        },
+        "reading_chain_exact": {
+          "numerator": 1,
+          "denominator": 3,
+          "value": 0.333333,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "navigation_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "partial_failure_reported": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      }
+    }
+  },
+  "metrics": {
+    "page_type_accuracy": {
+      "numerator": 17,
+      "denominator": 23,
+      "value": 0.73913,
+      "sample_count": 23,
+      "abstention_count": 0
+    },
+    "content_status_accuracy": {
+      "numerator": 16,
+      "denominator": 18,
+      "value": 0.888889,
+      "sample_count": 18,
+      "abstention_count": 1
+    },
+    "access_status_accuracy": {
+      "numerator": 22,
+      "denominator": 23,
+      "value": 0.956522,
+      "sample_count": 23,
+      "abstention_count": 0
+    },
+    "metadata_suppression": {
+      "numerator": 0,
+      "denominator": 2,
+      "value": 0.0,
+      "sample_count": 2,
+      "abstention_count": 0
+    },
+    "unsafe_body_rejection": {
+      "numerator": 5,
+      "denominator": 5,
+      "value": 1.0,
+      "sample_count": 5,
+      "abstention_count": 0
+    },
+    "body_noise_exclusion": {
+      "numerator": 2,
+      "denominator": 3,
+      "value": 0.666667,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_recall": {
+      "numerator": 8,
+      "denominator": 15,
+      "value": 0.533333,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_precision": {
+      "numerator": 8,
+      "denominator": 8,
+      "value": 1.0,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_direction_accuracy": {
+      "numerator": 0,
+      "denominator": 3,
+      "value": 0.0,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "content_retained_chars": {
+      "numerator": 6262,
+      "denominator": 7078,
+      "value": 0.884713,
+      "sample_count": 20,
+      "abstention_count": 1
+    },
+    "content_precision_chars": {
+      "numerator": 6262,
+      "denominator": 7555,
+      "value": 0.828855,
+      "sample_count": 20,
+      "abstention_count": 1
+    },
+    "logical_chapter_presence": {
+      "numerator": 4,
+      "denominator": 9,
+      "value": 0.444444,
+      "sample_count": 9,
+      "abstention_count": 0
+    },
+    "pagination_merge_accuracy": {
+      "numerator": 2,
+      "denominator": 4,
+      "value": 0.5,
+      "sample_count": 4,
+      "abstention_count": 0
+    },
+    "reading_chain_exact": {
+      "numerator": 1,
+      "denominator": 3,
+      "value": 0.333333,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "navigation_accuracy": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0,
+      "sample_count": 2,
+      "abstention_count": 0
+    },
+    "partial_failure_reported": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0,
+      "sample_count": 1,
+      "abstention_count": 0
+    }
+  },
+  "abstention_count": 1,
+  "macro_by_site": {
+    "synthetic": {
+      "page_type_accuracy": {
+        "numerator": 17,
+        "denominator": 23,
+        "value": 0.73913,
+        "sample_count": 23,
+        "abstention_count": 0
+      },
+      "content_status_accuracy": {
+        "numerator": 16,
+        "denominator": 18,
+        "value": 0.888889,
+        "sample_count": 18,
+        "abstention_count": 1
+      },
+      "access_status_accuracy": {
+        "numerator": 22,
+        "denominator": 23,
+        "value": 0.956522,
+        "sample_count": 23,
+        "abstention_count": 0
+      },
+      "metadata_suppression": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0,
+        "sample_count": 2,
+        "abstention_count": 0
+      },
+      "unsafe_body_rejection": {
+        "numerator": 5,
+        "denominator": 5,
+        "value": 1.0,
+        "sample_count": 5,
+        "abstention_count": 0
+      },
+      "body_noise_exclusion": {
+        "numerator": 2,
+        "denominator": 3,
+        "value": 0.666667,
+        "sample_count": 3,
+        "abstention_count": 0
+      },
+      "catalog_recall": {
+        "numerator": 8,
+        "denominator": 15,
+        "value": 0.533333,
+        "sample_count": 3,
+        "abstention_count": 0
+      },
+      "catalog_precision": {
+        "numerator": 8,
+        "denominator": 8,
+        "value": 1.0,
+        "sample_count": 3,
+        "abstention_count": 0
+      },
+      "catalog_direction_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0,
+        "sample_count": 3,
+        "abstention_count": 0
+      },
+      "content_retained_chars": {
+        "numerator": 6262,
+        "denominator": 7078,
+        "value": 0.884713,
+        "sample_count": 20,
+        "abstention_count": 1
+      },
+      "content_precision_chars": {
+        "numerator": 6262,
+        "denominator": 7555,
+        "value": 0.828855,
+        "sample_count": 20,
+        "abstention_count": 1
+      },
+      "logical_chapter_presence": {
+        "numerator": 4,
+        "denominator": 9,
+        "value": 0.444444,
+        "sample_count": 9,
+        "abstention_count": 0
+      },
+      "pagination_merge_accuracy": {
+        "numerator": 2,
+        "denominator": 4,
+        "value": 0.5,
+        "sample_count": 4,
+        "abstention_count": 0
+      },
+      "reading_chain_exact": {
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.333333,
+        "sample_count": 3,
+        "abstention_count": 0
+      },
+      "navigation_accuracy": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0,
+        "sample_count": 2,
+        "abstention_count": 0
+      },
+      "partial_failure_reported": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0,
+        "sample_count": 1,
+        "abstention_count": 0
+      }
+    }
+  },
+  "micro_by_page": {
+    "page_type_accuracy": {
+      "numerator": 17,
+      "denominator": 23,
+      "value": 0.73913,
+      "sample_count": 23,
+      "abstention_count": 0
+    },
+    "content_status_accuracy": {
+      "numerator": 16,
+      "denominator": 18,
+      "value": 0.888889,
+      "sample_count": 18,
+      "abstention_count": 1
+    },
+    "access_status_accuracy": {
+      "numerator": 22,
+      "denominator": 23,
+      "value": 0.956522,
+      "sample_count": 23,
+      "abstention_count": 0
+    },
+    "metadata_suppression": {
+      "numerator": 0,
+      "denominator": 2,
+      "value": 0.0,
+      "sample_count": 2,
+      "abstention_count": 0
+    },
+    "unsafe_body_rejection": {
+      "numerator": 5,
+      "denominator": 5,
+      "value": 1.0,
+      "sample_count": 5,
+      "abstention_count": 0
+    },
+    "body_noise_exclusion": {
+      "numerator": 2,
+      "denominator": 3,
+      "value": 0.666667,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_recall": {
+      "numerator": 8,
+      "denominator": 15,
+      "value": 0.533333,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_precision": {
+      "numerator": 8,
+      "denominator": 8,
+      "value": 1.0,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "catalog_direction_accuracy": {
+      "numerator": 0,
+      "denominator": 3,
+      "value": 0.0,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "content_retained_chars": {
+      "numerator": 6262,
+      "denominator": 7078,
+      "value": 0.884713,
+      "sample_count": 20,
+      "abstention_count": 1
+    },
+    "content_precision_chars": {
+      "numerator": 6262,
+      "denominator": 7555,
+      "value": 0.828855,
+      "sample_count": 20,
+      "abstention_count": 1
+    },
+    "logical_chapter_presence": {
+      "numerator": 4,
+      "denominator": 9,
+      "value": 0.444444,
+      "sample_count": 9,
+      "abstention_count": 0
+    },
+    "pagination_merge_accuracy": {
+      "numerator": 2,
+      "denominator": 4,
+      "value": 0.5,
+      "sample_count": 4,
+      "abstention_count": 0
+    },
+    "reading_chain_exact": {
+      "numerator": 1,
+      "denominator": 3,
+      "value": 0.333333,
+      "sample_count": 3,
+      "abstention_count": 0
+    },
+    "navigation_accuracy": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0,
+      "sample_count": 2,
+      "abstention_count": 0
+    },
+    "partial_failure_reported": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0,
+      "sample_count": 1,
+      "abstention_count": 0
+    }
+  },
+  "failure_breakdown": {
+    "acquisition_failure": 0,
+    "encoding_failure": 3,
+    "access_state_misclassification": 3,
+    "page_classification_failure": 5,
+    "content_missing_or_noisy": 10,
+    "catalog_or_order_failure": 12,
+    "pagination_failure": 2,
+    "metadata_failure": 2,
+    "export_failure": 0
+  },
+  "cases": {
+    "syn_access_states": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "HTTP_BYTES"
+      ],
+      "page_count": 2,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "value": 0.5,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "value": 0.5,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "metadata_suppression": {
+          "numerator": 0,
+          "denominator": 2,
+          "value": 0.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "unsafe_body_rejection": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "body_noise_exclusion": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "content_status_accuracy",
+          "sample": "challenge_403",
+          "message": "want ANTI_BOT got ACCESS_RESTRICTED"
+        },
+        {
+          "metric": "access_status_accuracy",
+          "sample": "challenge_403",
+          "message": "want ANTI_BOT got ACCESS_RESTRICTED"
+        },
+        {
+          "metric": "metadata_suppression",
+          "sample": "challenge_403",
+          "message": "metadata emitted on a page marked unsafe for metadata"
+        },
+        {
+          "metric": "metadata_suppression",
+          "sample": "challenge_200",
+          "message": "metadata emitted on a page marked unsafe for metadata"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_access_states",
+        "pages": {
+          "challenge_403": {
+            "page_id": "challenge_403",
+            "requested_url": "https://synthetic.invalid/access/403",
+            "final_url": "https://synthetic.invalid/access/403",
+            "http_status": 403,
+            "input_kind": "HTTP_BYTES",
+            "encoding": "utf-8",
+            "encoding_source": "http_header",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.1,
+            "content_status": "ACCESS_RESTRICTED",
+            "content_status_confidence": 0.7,
+            "content": "Enable JavaScript and cookies to continue",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "Just",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.10)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "HTTP 403 forbidden-ish"
+            }
+          },
+          "challenge_200": {
+            "page_id": "challenge_200",
+            "requested_url": "https://synthetic.invalid/access/200",
+            "final_url": "https://synthetic.invalid/access/200",
+            "http_status": 200,
+            "input_kind": "HTTP_BYTES",
+            "encoding": "utf-8",
+            "encoding_source": "http_header",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.1,
+            "content_status": "ANTI_BOT",
+            "content_status_confidence": 0.8,
+            "content": "Enable JavaScript and cookies to continue",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "Just",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.10)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "restriction phrase 'enable javascript and cookies' in short content"
+            }
+          }
+        },
+        "crawl": null
+      }
+    },
+    "syn_catalog_pagination": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 8,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 6,
+          "denominator": 8,
+          "value": 0.75,
+          "sample_count": 8,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "sample_count": 8,
+          "abstention_count": 0
+        },
+        "unsafe_body_rejection": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "catalog_recall": {
+          "numerator": 0,
+          "denominator": 7,
+          "value": 0.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "catalog_precision": {
+          "numerator": 0,
+          "denominator": 0,
+          "value": null,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "catalog_direction_accuracy": {
+          "numerator": 0,
+          "denominator": 2,
+          "value": 0.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 6,
+          "denominator": 6,
+          "value": 1.0,
+          "sample_count": 6,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 1947,
+          "denominator": 2247,
+          "value": 0.866489,
+          "sample_count": 7,
+          "abstention_count": 0
+        },
+        "content_precision_chars": {
+          "numerator": 1947,
+          "denominator": 1971,
+          "value": 0.987823,
+          "sample_count": 7,
+          "abstention_count": 0
+        },
+        "logical_chapter_presence": {
+          "numerator": 1,
+          "denominator": 6,
+          "value": 0.166667,
+          "sample_count": 6,
+          "abstention_count": 0
+        },
+        "pagination_merge_accuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "reading_chain_exact": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "page_type_accuracy",
+          "sample": "catalog_1",
+          "message": "want CATALOG_PAGE got UNKNOWN"
+        },
+        {
+          "metric": "catalog_recall",
+          "sample": "catalog_1",
+          "message": "catalog entries missing"
+        },
+        {
+          "metric": "catalog_direction_accuracy",
+          "sample": "catalog_1",
+          "message": "catalog direction mismatch"
+        },
+        {
+          "metric": "page_type_accuracy",
+          "sample": "catalog_2",
+          "message": "want CATALOG_PAGE got UNKNOWN"
+        },
+        {
+          "metric": "catalog_recall",
+          "sample": "catalog_2",
+          "message": "catalog entries missing"
+        },
+        {
+          "metric": "catalog_direction_accuracy",
+          "sample": "catalog_2",
+          "message": "catalog direction mismatch"
+        },
+        {
+          "metric": "pagination_merge_accuracy",
+          "sample": "ch1",
+          "message": "want pages ['https://synthetic.invalid/catalog/ch1'] got ['https://synthetic.invalid/catalog/list-1', 'https://synthetic.invalid/catalog/list-2']"
+        },
+        {
+          "metric": "content_retained_chars",
+          "sample": "logical:ch1",
+          "message": "expected body characters were missing"
+        },
+        {
+          "metric": "content_precision_chars",
+          "sample": "logical:ch1",
+          "message": "unexpected text was mixed into body"
+        },
+        {
+          "metric": "logical_chapter_presence",
+          "sample": "ch2",
+          "message": "logical chapter missing"
+        },
+        {
+          "metric": "logical_chapter_presence",
+          "sample": "ch3",
+          "message": "logical chapter missing"
+        },
+        {
+          "metric": "logical_chapter_presence",
+          "sample": "ch4",
+          "message": "logical chapter missing"
+        },
+        {
+          "metric": "logical_chapter_presence",
+          "sample": "ch5",
+          "message": "logical chapter missing"
+        },
+        {
+          "metric": "logical_chapter_presence",
+          "sample": "ch6",
+          "message": "logical chapter missing"
+        },
+        {
+          "metric": "reading_chain_exact",
+          "sample": "syn_catalog_pagination",
+          "message": "logical reading chain differs"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_catalog_pagination",
+        "pages": {
+          "catalog_1": {
+            "page_id": "catalog_1",
+            "requested_url": "https://synthetic.invalid/catalog/list-1",
+            "final_url": "https://synthetic.invalid/catalog/list-1",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.4,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "群岛记目录\n第1章\n第2章\n第3章\n第4章\n下一页",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "群岛记目录",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.40)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "content suspiciously short (25 chars) with no explicit restriction phrase"
+            }
+          },
+          "catalog_2": {
+            "page_id": "catalog_2",
+            "requested_url": "https://synthetic.invalid/catalog/list-2",
+            "final_url": "https://synthetic.invalid/catalog/list-2",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.4,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "群岛记目录\n第4章\n第5章\n第6章\n上一页",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "群岛记目录",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.40)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "content suspiciously short (21 chars) with no explicit restriction phrase"
+            }
+          },
+          "chapter_1": {
+            "page_id": "chapter_1",
+            "requested_url": "https://synthetic.invalid/catalog/ch1",
+            "final_url": "https://synthetic.invalid/catalog/ch1",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第1章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第1章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第1章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第1章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          },
+          "chapter_2": {
+            "page_id": "chapter_2",
+            "requested_url": "https://synthetic.invalid/catalog/ch2",
+            "final_url": "https://synthetic.invalid/catalog/ch2",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第2章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第2章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第2章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第2章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          },
+          "chapter_3": {
+            "page_id": "chapter_3",
+            "requested_url": "https://synthetic.invalid/catalog/ch3",
+            "final_url": "https://synthetic.invalid/catalog/ch3",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第3章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第3章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第3章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第3章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          },
+          "chapter_4": {
+            "page_id": "chapter_4",
+            "requested_url": "https://synthetic.invalid/catalog/ch4",
+            "final_url": "https://synthetic.invalid/catalog/ch4",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第4章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第4章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第4章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第4章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          },
+          "chapter_5": {
+            "page_id": "chapter_5",
+            "requested_url": "https://synthetic.invalid/catalog/ch5",
+            "final_url": "https://synthetic.invalid/catalog/ch5",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第5章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第5章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第5章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第5章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          },
+          "chapter_6": {
+            "page_id": "chapter_6",
+            "requested_url": "https://synthetic.invalid/catalog/ch6",
+            "final_url": "https://synthetic.invalid/catalog/ch6",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "目录分页第6章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "目录分页第6章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n目录分页第6章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第6章",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=321, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (321 chars)"
+            }
+          }
+        },
+        "crawl": {
+          "entry_page_id": "catalog_1",
+          "book_title": "群岛记目录",
+          "author": null,
+          "direction": "UNKNOWN",
+          "catalog_entries": [],
+          "chapters": [
+            {
+              "title": "群岛记目录",
+              "source_urls": [
+                "https://synthetic.invalid/catalog/list-1",
+                "https://synthetic.invalid/catalog/list-2"
+              ],
+              "content": "　　第1章\n\n　　第2章\n\n　　第3章\n\n　　第4章\n\n　　第4章\n\n　　第5章\n\n　　第6章",
+              "content_status": "EMPTY_CONTENT"
+            }
+          ],
+          "warnings": [
+            "no catalog found; falling back to chapter-link traversal"
+          ]
+        }
+      }
+    },
+    "syn_content_pagination": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 3,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "value": 1.0,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "value": 1.0,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "value": 1.0,
+          "sample_count": 3,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 1885,
+          "denominator": 2053,
+          "value": 0.918169,
+          "sample_count": 5,
+          "abstention_count": 0
+        },
+        "content_precision_chars": {
+          "numerator": 1885,
+          "denominator": 1963,
+          "value": 0.960265,
+          "sample_count": 5,
+          "abstention_count": 0
+        },
+        "navigation_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "logical_chapter_presence": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "pagination_merge_accuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "value": 0.5,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "reading_chain_exact": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "content_precision_chars",
+          "sample": "logical:ch1",
+          "message": "unexpected text was mixed into body"
+        },
+        {
+          "metric": "pagination_merge_accuracy",
+          "sample": "ch2",
+          "message": "want pages ['https://synthetic.invalid/pagination/ch2'] got ['https://synthetic.invalid/pagination/ch1-2']"
+        },
+        {
+          "metric": "content_retained_chars",
+          "sample": "logical:ch2",
+          "message": "expected body characters were missing"
+        },
+        {
+          "metric": "content_precision_chars",
+          "sample": "logical:ch2",
+          "message": "unexpected text was mixed into body"
+        },
+        {
+          "metric": "reading_chain_exact",
+          "sample": "syn_content_pagination",
+          "message": "logical reading chain differs"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_content_pagination",
+        "pages": {
+          "chapter_1_page_1": {
+            "page_id": "chapter_1_page_1",
+            "requested_url": "https://synthetic.invalid/pagination/ch1-1",
+            "final_url": "https://synthetic.invalid/pagination/ch1-1",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.6,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "第一页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "第一页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第一页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第1章 海路（第1页）",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": "https://synthetic.invalid/pagination/ch1-2",
+              "catalog_url": null,
+              "relations": [
+                {
+                  "source_url": "https://synthetic.invalid/pagination/ch1-1",
+                  "target_url": "https://synthetic.invalid/pagination/ch1-2",
+                  "relation_type": "NEXT_CHAPTER",
+                  "confidence": 0.72,
+                  "reason": "anchor text '下一章' implies NEXT_CHAPTER; target stays in the same directory"
+                }
+              ]
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=293, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (293 chars)"
+            }
+          },
+          "chapter_1_page_2": {
+            "page_id": "chapter_1_page_2",
+            "requested_url": "https://synthetic.invalid/pagination/ch1-2",
+            "final_url": "https://synthetic.invalid/pagination/ch1-2",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.7,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "第二页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "第二页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n第二页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第1章 海路（第2页）",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": "https://synthetic.invalid/pagination/ch1-1",
+              "next_chapter": "https://synthetic.invalid/pagination/ch2",
+              "catalog_url": null,
+              "relations": [
+                {
+                  "source_url": "https://synthetic.invalid/pagination/ch1-2",
+                  "target_url": "https://synthetic.invalid/pagination/ch1-1",
+                  "relation_type": "PREVIOUS_CHAPTER",
+                  "confidence": 0.72,
+                  "reason": "anchor text '上一章' implies PREVIOUS_CHAPTER; target stays in the same directory"
+                },
+                {
+                  "source_url": "https://synthetic.invalid/pagination/ch1-2",
+                  "target_url": "https://synthetic.invalid/pagination/ch2",
+                  "relation_type": "NEXT_CHAPTER",
+                  "confidence": 0.72,
+                  "reason": "anchor text '下一章' implies NEXT_CHAPTER; target stays in the same directory"
+                }
+              ]
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=293, punct=28, link_ratio=0.00, paragraphs=7; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (293 chars)"
+            }
+          },
+          "chapter_2": {
+            "page_id": "chapter_2",
+            "requested_url": "https://synthetic.invalid/pagination/ch2",
+            "final_url": "https://synthetic.invalid/pagination/ch2",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.82,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "下一逻辑章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "下一逻辑章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n下一逻辑章正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第2章 岛影",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": "https://synthetic.invalid/pagination/ch1-2",
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": [
+                {
+                  "source_url": "https://synthetic.invalid/pagination/ch2",
+                  "target_url": "https://synthetic.invalid/pagination/ch1-2",
+                  "relation_type": "PREVIOUS_CHAPTER",
+                  "confidence": 0.72,
+                  "reason": "anchor text '上一章' implies PREVIOUS_CHAPTER; target stays in the same directory"
+                }
+              ]
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=440, punct=40, link_ratio=0.00, paragraphs=10; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (440 chars)"
+            }
+          }
+        },
+        "crawl": {
+          "entry_page_id": "chapter_1_page_1",
+          "book_title": "第1章 海路（第1页）",
+          "author": null,
+          "direction": "UNKNOWN",
+          "catalog_entries": [],
+          "chapters": [
+            {
+              "title": "第1章 海路（第1页）",
+              "source_urls": [
+                "https://synthetic.invalid/pagination/ch1-1",
+                "https://synthetic.invalid/pagination/ch1-2"
+              ],
+              "content": "　　第一页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第一页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+              "content_status": "CONTENT_OK"
+            },
+            {
+              "title": "第1章 海路（第2页）",
+              "source_urls": [
+                "https://synthetic.invalid/pagination/ch1-2"
+              ],
+              "content": "　　第二页正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　第二页正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+              "content_status": "CONTENT_OK"
+            },
+            {
+              "title": "第2章 岛影",
+              "source_urls": [
+                "https://synthetic.invalid/pagination/ch2"
+              ],
+              "content": "　　下一逻辑章正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　下一逻辑章正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+              "content_status": "CONTENT_OK"
+            }
+          ],
+          "warnings": [
+            "no catalog found; falling back to chapter-link traversal",
+            "重复章节节点：第1章 海路（第2页） duplicates 第1章 海路（第1页） (['https://synthetic.invalid/pagination/ch1-2'])"
+          ]
+        }
+      }
+    },
+    "syn_encoding_bytes": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "HTTP_BYTES"
+      ],
+      "page_count": 2,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "value": 0.5,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 358,
+          "denominator": 686,
+          "value": 0.521866,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_precision_chars": {
+          "numerator": 358,
+          "denominator": 862,
+          "value": 0.415313,
+          "sample_count": 2,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "page_type_accuracy",
+          "sample": "conflict_page",
+          "message": "want CHAPTER_PAGE got UNKNOWN"
+        },
+        {
+          "metric": "content_retained_chars",
+          "sample": "conflict_page",
+          "message": "expected body characters were missing"
+        },
+        {
+          "metric": "content_precision_chars",
+          "sample": "conflict_page",
+          "message": "unexpected text was mixed into body"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_encoding_bytes",
+        "pages": {
+          "gb18030_page": {
+            "page_id": "gb18030_page",
+            "requested_url": "https://synthetic.invalid/encoding/gb",
+            "final_url": "https://synthetic.invalid/encoding/gb",
+            "http_status": 200,
+            "input_kind": "HTTP_BYTES",
+            "encoding": "gb18030",
+            "encoding_source": "http_header",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "龘字编码正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "龘字编码正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n龘字编码正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第一章 编码龘",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=343, punct=32, link_ratio=0.00, paragraphs=8; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (343 chars)"
+            }
+          },
+          "conflict_page": {
+            "page_id": "conflict_page",
+            "requested_url": "https://synthetic.invalid/encoding/conflict",
+            "final_url": "https://synthetic.invalid/encoding/conflict",
+            "http_status": 200,
+            "input_kind": "HTTP_BYTES",
+            "encoding": "gb18030",
+            "encoding_source": "http_header",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.5,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "鍐茬獊澹版槑姝ｆ枃绗�1娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�2娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�3娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�4娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�5娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�6娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�7娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�8娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�",
+            "exportable_content": "鍐茬獊澹版槑姝ｆ枃绗�1娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�2娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�3娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�4娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�5娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�6娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�7娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�\n鍐茬獊澹版槑姝ｆ枃绗�8娈碉紝娼０缁曡繃鏃у煄澧欙紝鏃呬汉鎶婄伅涓鹃珮锛岀‘璁ょ煶闃朵笂鐨勬瘡涓�閬撳埢鐥曢兘浠嶇劧娓呮櫚銆�",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "绗簩绔� 鍐茬獊澹版槑",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.47, catalog=0.10, book=0.50)",
+              "content": "DOM density winner <article>: text=519, punct=8, link_ratio=0.00, paragraphs=8; trafilatura agrees (ratio=0.90)",
+              "content_status": "content extracted normally (519 chars)"
+            }
+          }
+        },
+        "crawl": null
+      }
+    },
+    "syn_fragment_identity": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 2,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 0,
+          "denominator": 2,
+          "value": 0.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "page_type_accuracy",
+          "sample": "fragment_1",
+          "message": "want BOOK_PAGE got UNKNOWN"
+        },
+        {
+          "metric": "page_type_accuracy",
+          "sample": "fragment_2",
+          "message": "want BOOK_PAGE got UNKNOWN"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_fragment_identity",
+        "pages": {
+          "fragment_1": {
+            "page_id": "fragment_1",
+            "requested_url": "https://synthetic.invalid/fragments/book#c1",
+            "final_url": "https://synthetic.invalid/fragments/book#c1",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.4,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "锚点之书\n第一章\n第一章锚点正文。\n第二章\n第二章锚点正文。",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "锚点之书",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.40)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "content suspiciously short (30 chars) with no explicit restriction phrase"
+            }
+          },
+          "fragment_2": {
+            "page_id": "fragment_2",
+            "requested_url": "https://synthetic.invalid/fragments/book#c2",
+            "final_url": "https://synthetic.invalid/fragments/book#c2",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.4,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "锚点之书\n第一章\n第一章锚点正文。\n第二章\n第二章锚点正文。",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "锚点之书",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.10, catalog=0.10, book=0.40)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "content suspiciously short (30 chars) with no explicit restriction phrase"
+            }
+          }
+        },
+        "crawl": null
+      }
+    },
+    "syn_partial_failure": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 1,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 670,
+          "denominator": 670,
+          "value": 1.0,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "content_precision_chars": {
+          "numerator": 670,
+          "denominator": 691,
+          "value": 0.969609,
+          "sample_count": 2,
+          "abstention_count": 0
+        },
+        "navigation_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "logical_chapter_presence": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "pagination_merge_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "reading_chain_exact": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "partial_failure_reported": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "content_precision_chars",
+          "sample": "logical:ch1",
+          "message": "unexpected text was mixed into body"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_partial_failure",
+        "pages": {
+          "chapter_1": {
+            "page_id": "chapter_1",
+            "requested_url": "https://synthetic.invalid/partial/chapter-1",
+            "final_url": "https://synthetic.invalid/partial/chapter-1",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.82,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "中断前正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "中断前正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n中断前正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第一章 中断前",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": "https://synthetic.invalid/partial/missing-chapter",
+              "catalog_url": null,
+              "relations": [
+                {
+                  "source_url": "https://synthetic.invalid/partial/chapter-1",
+                  "target_url": "https://synthetic.invalid/partial/missing-chapter",
+                  "relation_type": "NEXT_CHAPTER",
+                  "confidence": 0.72,
+                  "reason": "anchor text '下一章' implies NEXT_CHAPTER; target stays in the same directory"
+                }
+              ]
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=335, punct=32, link_ratio=0.00, paragraphs=8; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (335 chars)"
+            }
+          }
+        },
+        "crawl": {
+          "entry_page_id": "chapter_1",
+          "book_title": "第一章 中断前",
+          "author": null,
+          "direction": "UNKNOWN",
+          "catalog_entries": [],
+          "chapters": [
+            {
+              "title": "第一章 中断前",
+              "source_urls": [
+                "https://synthetic.invalid/partial/chapter-1"
+              ],
+              "content": "　　中断前正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n\n　　中断前正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+              "content_status": "CONTENT_OK"
+            }
+          ],
+          "warnings": [
+            "no catalog found; falling back to chapter-link traversal",
+            "traversal fetch failed: offline fixture missing / outside captured scope"
+          ]
+        }
+      }
+    },
+    "syn_text_structures": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 4,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 3,
+          "denominator": 4,
+          "value": 0.75,
+          "sample_count": 4,
+          "abstention_count": 0
+        },
+        "content_status_accuracy": {
+          "numerator": 3,
+          "denominator": 4,
+          "value": 0.75,
+          "sample_count": 4,
+          "abstention_count": 1
+        },
+        "access_status_accuracy": {
+          "numerator": 4,
+          "denominator": 4,
+          "value": 1.0,
+          "sample_count": 4,
+          "abstention_count": 0
+        },
+        "content_retained_chars": {
+          "numerator": 1402,
+          "denominator": 1422,
+          "value": 0.985935,
+          "sample_count": 4,
+          "abstention_count": 1
+        },
+        "content_precision_chars": {
+          "numerator": 1402,
+          "denominator": 2068,
+          "value": 0.67795,
+          "sample_count": 4,
+          "abstention_count": 1
+        },
+        "body_noise_exclusion": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 1,
+      "failures": [
+        {
+          "metric": "content_retained_chars",
+          "sample": "comments_chapter",
+          "message": "expected body characters were missing"
+        },
+        {
+          "metric": "content_precision_chars",
+          "sample": "comments_chapter",
+          "message": "unexpected text was mixed into body"
+        },
+        {
+          "metric": "body_noise_exclusion",
+          "sample": "comments_chapter",
+          "message": "forbidden text retained: 读者评论请勿进入正文"
+        },
+        {
+          "metric": "page_type_accuracy",
+          "sample": "short_prologue",
+          "message": "want CHAPTER_PAGE got UNKNOWN"
+        },
+        {
+          "metric": "content_status_accuracy",
+          "sample": "short_prologue",
+          "message": "want CONTENT_OK got EMPTY_CONTENT"
+        },
+        {
+          "metric": "content_precision_chars",
+          "sample": "short_prologue",
+          "message": "unexpected text was mixed into body"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_text_structures",
+        "pages": {
+          "p_chapter": {
+            "page_id": "p_chapter",
+            "requested_url": "https://synthetic.invalid/text/p",
+            "final_url": "https://synthetic.invalid/text/p",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "松港正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "松港正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n松港正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第一章 松港",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <article>: text=494, punct=48, link_ratio=0.00, paragraphs=12; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (494 chars)"
+            }
+          },
+          "br_chapter": {
+            "page_id": "br_chapter",
+            "requested_url": "https://synthetic.invalid/text/br",
+            "final_url": "https://synthetic.invalid/text/br",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.72,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "雾桥正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "雾桥正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n雾桥正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第二章 雾桥",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <div>: text=494, punct=48, link_ratio=0.00, paragraphs=6; trafilatura agrees (ratio=1.00)",
+              "content_status": "content extracted normally (494 chars)"
+            }
+          },
+          "comments_chapter": {
+            "page_id": "comments_chapter",
+            "requested_url": "https://synthetic.invalid/text/comments",
+            "final_url": "https://synthetic.invalid/text/comments",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CHAPTER_PAGE",
+            "page_type_confidence": 0.85,
+            "content_status": "CONTENT_OK",
+            "content_status_confidence": 0.95,
+            "content": "评论区\n读者评论请勿进入正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第13段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第14段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第15段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第16段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第17段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第18段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第19段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第20段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第21段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第22段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "exportable_content": "评论区\n读者评论请勿进入正文第1段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第2段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第3段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第4段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第5段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第6段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第7段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第8段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第9段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第10段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第11段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第12段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第13段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第14段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第15段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第16段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第17段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第18段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第19段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第20段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第21段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。\n读者评论请勿进入正文第22段，潮声绕过旧城墙，旅人把灯举高，确认石阶上的每一道刻痕都仍然清晰。",
+            "content_confidence": 0.99,
+            "metadata": {
+              "book_title": "第三章 灯塔",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "long low-link content with chapter title / prev-next navigation",
+              "content": "DOM density winner <section>: text=1050, punct=88, link_ratio=0.00, paragraphs=22; trafilatura agrees (ratio=0.77)",
+              "content_status": "content extracted normally (1050 chars)"
+            }
+          },
+          "short_prologue": {
+            "page_id": "short_prologue",
+            "requested_url": "https://synthetic.invalid/text/prologue",
+            "final_url": "https://synthetic.invalid/text/prologue",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "UNKNOWN",
+            "page_type_confidence": 0.45,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "序章 灯亮\n雨停了。她推开门，看见多年未亮的站台灯忽然亮起。",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "序章 灯亮",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": []
+            },
+            "diagnostics": {
+              "page_type": "no type reached threshold or top scores too close (chapter=0.45, catalog=0.10, book=0.10)",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=1.00)",
+              "content_status": "content suspiciously short (30 chars) with no explicit restriction phrase"
+            }
+          }
+        },
+        "crawl": null
+      }
+    },
+    "syn_volume_reset_table": {
+      "status": "FAIL",
+      "site_id": "synthetic",
+      "suite": "SYNTHETIC_REGRESSION",
+      "input_modes": [
+        "SYNTHETIC_HTML"
+      ],
+      "page_count": 1,
+      "metrics": {
+        "page_type_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "access_status_accuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "unsafe_body_rejection": {
+          "numerator": 1,
+          "denominator": 1,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "catalog_recall": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "catalog_precision": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        },
+        "catalog_direction_accuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "value": 0.0,
+          "sample_count": 1,
+          "abstention_count": 0
+        }
+      },
+      "abstention_count": 0,
+      "failures": [
+        {
+          "metric": "catalog_direction_accuracy",
+          "sample": "catalog",
+          "message": "catalog direction mismatch"
+        }
+      ],
+      "prediction": {
+        "schema_version": "1.0.0",
+        "document_type": "benchmark_prediction",
+        "case_id": "syn_volume_reset_table",
+        "pages": {
+          "catalog": {
+            "page_id": "catalog",
+            "requested_url": "https://synthetic.invalid/volumes/catalog",
+            "final_url": "https://synthetic.invalid/volumes/catalog",
+            "http_status": 200,
+            "input_kind": "SYNTHETIC_HTML",
+            "encoding": "utf-8",
+            "encoding_source": "synthetic_utf8",
+            "page_type": "CATALOG_PAGE",
+            "page_type_confidence": 0.55,
+            "content_status": "EMPTY_CONTENT",
+            "content_status_confidence": 0.6,
+            "content": "双卷目录\n第一卷 潮汐\n4第4章 第一卷 潮汐\n3第3章 第一卷 潮汐\n2第2章 第一卷 潮汐\n1第1章 第一卷 潮汐\n第二卷 星火\n4第4章 第二卷 星火\n3第3章 第二卷 星火\n2第2章 第二卷 星火\n1第1章 第二卷 星火",
+            "exportable_content": "",
+            "content_confidence": 0.44999999999999996,
+            "metadata": {
+              "book_title": "双卷目录",
+              "author": null
+            },
+            "navigation": {
+              "previous_chapter": null,
+              "next_chapter": null,
+              "catalog_url": null,
+              "relations": []
+            },
+            "catalog": {
+              "direction": "UNKNOWN",
+              "entries": [
+                {
+                  "title": "第4章 第一卷 潮汐",
+                  "target_url": "https://synthetic.invalid/volumes/v1-c4",
+                  "source_order": 0
+                },
+                {
+                  "title": "第3章 第一卷 潮汐",
+                  "target_url": "https://synthetic.invalid/volumes/v1-c3",
+                  "source_order": 1
+                },
+                {
+                  "title": "第2章 第一卷 潮汐",
+                  "target_url": "https://synthetic.invalid/volumes/v1-c2",
+                  "source_order": 2
+                },
+                {
+                  "title": "第1章 第一卷 潮汐",
+                  "target_url": "https://synthetic.invalid/volumes/v1-c1",
+                  "source_order": 3
+                },
+                {
+                  "title": "第4章 第二卷 星火",
+                  "target_url": "https://synthetic.invalid/volumes/v2-c4",
+                  "source_order": 4
+                },
+                {
+                  "title": "第3章 第二卷 星火",
+                  "target_url": "https://synthetic.invalid/volumes/v2-c3",
+                  "source_order": 5
+                },
+                {
+                  "title": "第2章 第二卷 星火",
+                  "target_url": "https://synthetic.invalid/volumes/v2-c2",
+                  "source_order": 6
+                },
+                {
+                  "title": "第1章 第二卷 星火",
+                  "target_url": "https://synthetic.invalid/volumes/v2-c1",
+                  "source_order": 7
+                }
+              ]
+            },
+            "diagnostics": {
+              "page_type": "many chapter-title-like links clustered together",
+              "content": "no div/article/main/section candidate reached threshold; body fallback; trafilatura agrees (ratio=0.97)",
+              "content_status": "content suspiciously short (114 chars) with no explicit restriction phrase"
+            }
+          }
+        },
+        "crawl": null
+      }
+    }
+  },
+  "limitations": [
+    "Only project-authored synthetic cases were executed.",
+    "No real website support or whole-book completeness is claimed.",
+    "BROWSER_DOM and real HTTP capture groups currently have zero eligible cases.",
+    "The repository has no dependency lock file; dependency_lock_hash is null and pyproject.toml is recorded separately."
+  ]
+}

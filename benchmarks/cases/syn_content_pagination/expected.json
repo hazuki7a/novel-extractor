@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_content_pagination",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "chapter_1_page_1",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第1章 海路（第1页）",
+      "content_reference_path": "../../fixtures/synthetic/syn_content_pagination/reference/chapter_1_page_1.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [
+        {
+          "type": "NEXT_CONTENT_PAGE",
+          "target_page_id": "chapter_1_page_2",
+          "target_url": "https://synthetic.invalid/pagination/ch1-2",
+          "evidence": "same numbered chapter, explicit page marker"
+        }
+      ],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "chapter_1_page_2",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第1章 海路（第2页）",
+      "content_reference_path": "../../fixtures/synthetic/syn_content_pagination/reference/chapter_1_page_2.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [
+        {
+          "type": "NEXT_CHAPTER",
+          "target_page_id": "chapter_2",
+          "target_url": "https://synthetic.invalid/pagination/ch2",
+          "evidence": "next logical chapter"
+        }
+      ],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "chapter_2",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第2章 岛影",
+      "content_reference_path": "../../fixtures/synthetic/syn_content_pagination/reference/chapter_2.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    }
+  ],
+  "logical_chapters": [
+    {
+      "chapter_id": "ch1",
+      "title": "第1章 海路",
+      "source_page_ids": [
+        "chapter_1_page_1",
+        "chapter_1_page_2"
+      ],
+      "reference_text_path": "../../fixtures/synthetic/syn_content_pagination/reference/logical_chapter_1.txt",
+      "complete_within_case": true
+    },
+    {
+      "chapter_id": "ch2",
+      "title": "第2章 岛影",
+      "source_page_ids": [
+        "chapter_2"
+      ],
+      "reference_text_path": "../../fixtures/synthetic/syn_content_pagination/reference/logical_chapter_2.txt",
+      "complete_within_case": true
+    }
+  ],
+  "expected_reading_order": [
+    "ch1",
+    "ch2"
+  ],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

@@ -1,0 +1,3 @@
+9e70c16dbc2ef6ff166fad0169c04ba4fc27e2a33b6748b3f1f8b226eb0acffd  novel_extractor-0.1.0-py3-none-any.whl
+d266bf840bdb9765211d86f149e8d829d52c89cc4774e95440fdefdff3ab77a9  novel-extractor-v0.1.0-source.zip
+9909dc88c4c207ef1adf046e4890a893fffceeb06472edb34ccfe9a0e2afb524  RELEASE_NOTES.md

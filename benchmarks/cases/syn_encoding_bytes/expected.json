@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_encoding_bytes",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "gb18030_page",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第一章 编码龘",
+      "content_reference_path": "../../fixtures/synthetic/syn_encoding_bytes/reference/gb18030.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    },
+    {
+      "page_id": "conflict_page",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第二章 冲突声明",
+      "content_reference_path": "../../fixtures/synthetic/syn_encoding_bytes/reference/conflict.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": [
+        "HTTP declares GBK, bytes and meta are UTF-8."
+      ]
+    }
+  ],
+  "logical_chapters": [],
+  "expected_reading_order": [],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

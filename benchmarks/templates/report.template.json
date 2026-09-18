@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_report_template",
+  "run_status": "NOT_RUN",
+  "run_id": null,
+  "code_commit": null,
+  "dataset_version": null,
+  "dependency_lock_hash": null,
+  "configuration_hash": null,
+  "network_allowed": false,
+  "input_mode": null,
+  "cache_mode": null,
+  "dataset_split": null,
+  "case_counts": {
+    "eligible": null,
+    "executed": null,
+    "invalid": null,
+    "deferred": null,
+    "failed": null
+  },
+  "results_by_suite": {
+    "CN_STATIC_CONTENT": {
+      "case_count": null,
+      "metrics": null
+    },
+    "CN_ACCESS_STATE": {
+      "case_count": null,
+      "metrics": null
+    },
+    "CN_DYNAMIC_INPUT": {
+      "case_count": null,
+      "metrics": null
+    },
+    "CROSS_LANGUAGE": {
+      "case_count": null,
+      "metrics": null
+    },
+    "NON_HTML_NEGATIVE": {
+      "case_count": null,
+      "metrics": null
+    },
+    "ENCODING": {
+      "case_count": null,
+      "metrics": null
+    },
+    "SYNTHETIC_REGRESSION": {
+      "case_count": null,
+      "metrics": null
+    }
+  },
+  "metrics_must_include": [
+    "numerator",
+    "denominator",
+    "macro_by_site",
+    "micro_by_page",
+    "abstention_count"
+  ],
+  "failure_breakdown": {
+    "acquisition_failure": null,
+    "encoding_failure": null,
+    "access_state_misclassification": null,
+    "page_classification_failure": null,
+    "content_missing_or_noisy": null,
+    "catalog_or_order_failure": null,
+    "pagination_failure": null,
+    "metadata_failure": null,
+    "export_failure": null
+  },
+  "notes": [
+    "数值 null 表示尚未执行，不能显示为 0% 或 100%。",
+    "正常拒绝验证页计入状态识别成功，不计入小说正文提取成功。",
+    "真实样本、自制样本、浏览器 DOM 与 HTTP 原始响应须分组。",
+    "受限页上 'Just' 之类标题不得作为小说名输出。"
+  ]
+}

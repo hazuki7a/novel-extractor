@@ -1,0 +1,34 @@
+{
+  "document_type": "package_validation_report",
+  "checked_on": "2026-09-16",
+  "result": "PASS",
+  "scope": "本指南包的JSON/引用/字段一致性，以及配置校验脚本的正向和负向检查。",
+  "explicit_exclusions": [
+    "未下载20站真实HTML",
+    "未运行用户的小说解析项目",
+    "未测量正文提取成功率",
+    "未完成真实数据集的许可审查",
+    "不证明这些网站可被自动访问"
+  ],
+  "checks": {
+    "all_json_files_parse": true,
+    "candidate_count_20": true,
+    "primary_and_special_counts": true,
+    "unique_site_ids": true,
+    "guide_contains_every_site_id": true,
+    "no_fake_completed_real_samples": true,
+    "no_false_byte_encoding_verification": true,
+    "no_unsupported_coverage_claims": true,
+    "report_marked_not_run": true,
+    "fenced_code_blocks_balanced": true,
+    "configuration_checker_exit_zero": true,
+    "reject_duplicate_site_id": true,
+    "reject_automatic_live_fetch": true,
+    "reject_unsupported_coverage_claim": true,
+    "reject_unknown_source_reference": true,
+    "reject_test_claim_without_fixtures": true,
+    "reject_nonobject_site": true
+  },
+  "checker_stdout": "PLAN_VALIDATION_OK: 20 candidate sources\nReal captured HTML fixtures: 0\nNo network access or extractor evaluation was performed.",
+  "ready_real_cases": 0
+}

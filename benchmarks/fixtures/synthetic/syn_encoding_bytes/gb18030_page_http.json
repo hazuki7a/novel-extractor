@@ -1,0 +1,8 @@
+{
+  "requested_url": "https://synthetic.invalid/encoding/gb",
+  "final_url": "https://synthetic.invalid/encoding/gb",
+  "status": 200,
+  "headers": {
+    "content-type": "text/html; charset=gb18030"
+  }
+}

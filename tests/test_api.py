@@ -107,7 +107,9 @@ def test_webui_analyze_and_download_job(tmp_path):
         conn.request("GET", "/")
         resp = conn.getresponse()
         assert resp.status == 200
-        assert b"novel-extractor" in resp.read()
+        index = resp.read().decode("utf-8")
+        assert "小说提取器" in index
+        assert 'id="progressBar"' in index
         # analyze
         import json as _json
 
@@ -135,7 +137,79 @@ def test_webui_analyze_and_download_job(tmp_path):
         assert state["status"] == "done"
         assert state["chapters"] == 8
         assert state["chapters_ok"] == 8
+        assert state["progress"]["phase"] == "done"
+        assert state["progress"]["percent"] == 100.0
         conn.close()
     finally:
         server.shutdown()
         server.server_close()
+
+
+def test_webui_running_job_reports_chapter_progress(tmp_path):
+    import threading
+
+    from novel_extractor.webui import WebUI
+
+    reported = threading.Event()
+    release = threading.Event()
+
+    class BlockingExtractor:
+        def extract(self, url, progress=None):
+            assert progress is not None
+            progress(2, 8, "第2章 测试进度", "CONTENT_OK", 0.4)
+            reported.set()
+            release.wait(timeout=5)
+            raise RuntimeError("test finished")
+
+    webui = WebUI(output_root=tmp_path, fetcher=FakeFetcher())
+    webui.extractor = BlockingExtractor()
+    job_id = webui.handle_download({"url": "http://e.com/book/1/catalog.html"})["job_id"]
+    assert reported.wait(timeout=2)
+
+    state = webui.handle_job(job_id)
+    assert state["status"] == "running"
+    assert state["progress"] == {
+        "phase": "extracting",
+        "done": 2,
+        "total": 8,
+        "title": "第2章 测试进度",
+        "chapter_status": "CONTENT_OK",
+        "interval": 0.4,
+        "percent": 25.0,
+        "message": "",
+    }
+    release.set()
+
+
+def test_webui_recreates_default_network_client_for_each_task(tmp_path, monkeypatch):
+    import novel_extractor.webui as webui_module
+
+    created = []
+    closed = []
+
+    class RecordingFetcher:
+        def __init__(self, instance_id):
+            self.instance_id = instance_id
+
+        def close(self):
+            closed.append(self.instance_id)
+
+    class RecordingExtractor:
+        def __init__(self, output_root):
+            self.instance_id = len(created) + 1
+            self.fetcher = RecordingFetcher(self.instance_id)
+            created.append((self.instance_id, output_root))
+
+        def analyze(self, url):
+            return {"instance_id": self.instance_id, "url": url}
+
+    monkeypatch.setattr(webui_module, "NovelExtractor", RecordingExtractor)
+    webui = webui_module.WebUI(output_root=tmp_path)
+
+    first = webui.handle_analyze({"url": "https://example.com/first"})
+    second = webui.handle_analyze({"url": "https://example.com/second"})
+
+    assert first["instance_id"] == 1
+    assert second["instance_id"] == 2
+    assert [output_root for _, output_root in created] == [tmp_path, tmp_path]
+    assert closed == [1, 2]

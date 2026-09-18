@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_volume_reset_table",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "catalog",
+      "page_type": "CATALOG_PAGE",
+      "access_status": "OK",
+      "content_status": null,
+      "render_requirement": "NONE",
+      "should_extract_content": false,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": null,
+      "content_reference_path": null,
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": "MIXED",
+      "catalog_entries": [
+        {
+          "chapter_id": "v1c4",
+          "title": "第4章 第一卷 潮汐",
+          "volume": "第一卷 潮汐",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v1-c4",
+          "fragment": null,
+          "source_order": 1
+        },
+        {
+          "chapter_id": "v1c3",
+          "title": "第3章 第一卷 潮汐",
+          "volume": "第一卷 潮汐",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v1-c3",
+          "fragment": null,
+          "source_order": 2
+        },
+        {
+          "chapter_id": "v1c2",
+          "title": "第2章 第一卷 潮汐",
+          "volume": "第一卷 潮汐",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v1-c2",
+          "fragment": null,
+          "source_order": 3
+        },
+        {
+          "chapter_id": "v1c1",
+          "title": "第1章 第一卷 潮汐",
+          "volume": "第一卷 潮汐",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v1-c1",
+          "fragment": null,
+          "source_order": 4
+        },
+        {
+          "chapter_id": "v2c4",
+          "title": "第4章 第二卷 星火",
+          "volume": "第二卷 星火",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v2-c4",
+          "fragment": null,
+          "source_order": 5
+        },
+        {
+          "chapter_id": "v2c3",
+          "title": "第3章 第二卷 星火",
+          "volume": "第二卷 星火",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v2-c3",
+          "fragment": null,
+          "source_order": 6
+        },
+        {
+          "chapter_id": "v2c2",
+          "title": "第2章 第二卷 星火",
+          "volume": "第二卷 星火",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v2-c2",
+          "fragment": null,
+          "source_order": 7
+        },
+        {
+          "chapter_id": "v2c1",
+          "title": "第1章 第二卷 星火",
+          "volume": "第二卷 星火",
+          "page_id": null,
+          "target_url": "https://synthetic.invalid/volumes/v2-c1",
+          "fragment": null,
+          "source_order": 8
+        }
+      ],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": [
+        "Each volume is descending; numbering resets in the second volume."
+      ]
+    }
+  ],
+  "logical_chapters": [],
+  "expected_reading_order": [],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

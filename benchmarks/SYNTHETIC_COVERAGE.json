@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "synthetic_coverage_ledger",
+  "dataset_version": "synthetic-contract-v1",
+  "real_site_claims": 0,
+  "cases": {
+    "syn_text_structures": [
+      "p_paragraphs",
+      "br_paragraphs",
+      "comments_ads",
+      "short_prologue"
+    ],
+    "syn_access_states": [
+      "http_403_challenge",
+      "http_200_challenge",
+      "no_fake_body"
+    ],
+    "syn_encoding_bytes": [
+      "gb18030_bytes",
+      "http_meta_encoding_conflict"
+    ],
+    "syn_content_pagination": [
+      "content_pagination",
+      "mislabelled_next_chapter"
+    ],
+    "syn_catalog_pagination": [
+      "catalog_pagination",
+      "duplicate_boundary"
+    ],
+    "syn_fragment_identity": [
+      "multiple_chapters_one_page",
+      "fragment_identity"
+    ],
+    "syn_volume_reset_table": [
+      "table_layout",
+      "catalog_descending",
+      "volume_number_reset",
+      "mixed_catalog"
+    ],
+    "syn_partial_failure": [
+      "missing_fixture",
+      "partial_failure_report",
+      "no_network_fallback"
+    ]
+  },
+  "still_missing_from_synthetic_contract_v1": [],
+  "notes": [
+    "This ledger covers only project-authored synthetic inputs.",
+    "The 20-source real-site coverage plan remains NOT_YET_CAPTURED."
+  ]
+}

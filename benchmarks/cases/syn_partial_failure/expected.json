@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "benchmark_expected",
+  "annotation_status": "READY",
+  "case_id": "syn_partial_failure",
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "chapter_1",
+      "page_type": "CHAPTER_PAGE",
+      "access_status": "OK",
+      "content_status": "CONTENT_OK",
+      "render_requirement": "NONE",
+      "should_extract_content": true,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": "第一章 中断前",
+      "content_reference_path": "../../fixtures/synthetic/syn_partial_failure/reference/chapter_1.txt",
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [
+        {
+          "type": "NEXT_CHAPTER",
+          "target_page_id": null,
+          "target_url": "https://synthetic.invalid/partial/missing-chapter",
+          "evidence": "target deliberately outside captured scope"
+        }
+      ],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    }
+  ],
+  "logical_chapters": [
+    {
+      "chapter_id": "ch1",
+      "title": "第一章 中断前",
+      "source_page_ids": [
+        "chapter_1"
+      ],
+      "reference_text_path": "../../fixtures/synthetic/syn_partial_failure/reference/logical_chapter_1.txt",
+      "complete_within_case": true
+    }
+  ],
+  "expected_reading_order": [
+    "ch1"
+  ],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": true,
+    "must_not_claim_complete_book": true
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": "manual review of project-authored fixture",
+    "reviewer_alias": "project",
+    "reviewed_at": "2026-09-17T00:00:00+08:00",
+    "notes": []
+  }
+}

@@ -16,5 +16,7 @@ output/**
 !output/.gitkeep
 benchmarks/**/actual/
 benchmarks/reports/*.json
+!benchmarks/reports/baseline_v0.json
+!benchmarks/reports/failure_analysis.json
 *.log
 HANDOFF.md

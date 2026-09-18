@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "expected_template",
+  "annotation_status": "DRAFT",
+  "case_id": null,
+  "normalization_profile": "NFC_LF_TRIM_OUTER_NO_REWRITE",
+  "page_labels": [
+    {
+      "page_id": "page_001",
+      "page_type": null,
+      "access_status": null,
+      "content_status": null,
+      "render_requirement": null,
+      "should_extract_content": null,
+      "should_extract_book_metadata": null,
+      "book_title": null,
+      "author": null,
+      "chapter_title": null,
+      "content_reference_path": null,
+      "content_regions": [],
+      "exclude_regions": [],
+      "catalog_direction": null,
+      "catalog_entries": [],
+      "relations": [],
+      "must_not_export_as_body": [],
+      "evidence_notes": []
+    }
+  ],
+  "logical_chapters": [],
+  "expected_reading_order": [],
+  "expected_export": {
+    "required": false,
+    "reference_path": null,
+    "must_report_missing_chapters": null,
+    "must_not_claim_complete_book": null
+  },
+  "evaluation_scope": {
+    "global_catalog_complete": false,
+    "order_scope": "sampled_subgraph",
+    "unknown_labels_are_skipped_fields_not_correct_predictions": true
+  },
+  "review": {
+    "method": null,
+    "reviewer_alias": null,
+    "reviewed_at": null,
+    "notes": []
+  },
+  "field_help": {
+    "page_type": [
+      "BOOK_PAGE",
+      "CATALOG_PAGE",
+      "CHAPTER_PAGE",
+      "UNKNOWN"
+    ],
+    "access_status": [
+      "OK",
+      "LOGIN_REQUIRED",
+      "PAYWALL",
+      "ANTI_BOT",
+      "RATE_LIMITED",
+      "NOT_FOUND",
+      "ACCESS_RESTRICTED",
+      "UNKNOWN"
+    ],
+    "content_status": [
+      "CONTENT_OK",
+      "EMPTY_CONTENT",
+      "ACCESS_RESTRICTED",
+      "PAYWALL",
+      "LOGIN_REQUIRED",
+      "ANTI_BOT",
+      "NOT_FOUND",
+      "UNKNOWN_FAILURE"
+    ],
+    "render_requirement": [
+      "NONE",
+      "JS_REQUIRED",
+      "UNKNOWN"
+    ],
+    "catalog_direction": [
+      "ASCENDING",
+      "DESCENDING",
+      "MIXED",
+      "UNKNOWN"
+    ],
+    "relation_types": [
+      "PREVIOUS_CONTENT_PAGE",
+      "NEXT_CONTENT_PAGE",
+      "PREVIOUS_CATALOG_PAGE",
+      "NEXT_CATALOG_PAGE",
+      "PREVIOUS_CHAPTER",
+      "NEXT_CHAPTER",
+      "CATALOG_LINK"
+    ],
+    "content_regions": "可记录 {locator_type: xpath, locator: ..., reference_text_path: ...}；只供人工标注和评估，禁止作为解析器输入。",
+    "catalog_entries": "记录 {chapter_id, title, volume, page_id, target_url, fragment, source_order}；阅读顺序在 expected_reading_order 单独标注。",
+    "relations": "记录 {type, target_page_id, target_url, evidence}；未知关系不猜测。",
+    "logical_chapters": "记录 {chapter_id, title, source_page_ids, reference_text_path, complete_within_case}；一章可对应多页，一页也可能含多章。",
+    "MIXED": "评测扩展标签：分卷方向不一致或最新章节区与完整目录混排。现有程序不支持时由适配层保留歧义，不能强制整体反转。"
+  }
+}

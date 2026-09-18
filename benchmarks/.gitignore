@@ -1,0 +1,10 @@
+# Private captures and browser/session material must not be committed by default.
+fixtures/private/
+captures/
+**/*.har
+**/cookies*.json
+**/storage_state*.json
+.auth/
+browser_profiles/
+**/__pycache__/
+reports/local/
